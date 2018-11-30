@@ -1,0 +1,37 @@
+{
+   "homeTown": "Metro City", 
+    "guns": [
+        {
+            "name": "AK-47",
+            "age": 29,
+            "secretIdentity": "Dan Jukes",
+            "powers": [
+                "Radiation resistance",
+                "Turning tiny",
+                "Radiation blast"
+            ]
+        },
+        {
+            "name": "M4",
+            "age": 39,
+            "secretIdentity": "Jane Wilson",
+            "powers": [
+                "Million tonne punch",
+                "Damage resistance",
+                "Superhuman reflexes"
+            ]
+        },
+        {
+            "name": "Scar",
+            "age": 1000000,
+            "secretIdentity": "Unknown",
+            "powers": [
+                "Immortality",
+                "Heat Immunity",
+                "Inferno",
+                "Teleportation",
+                "Interdimensional travel"
+            ]
+        }
+    ]
+}

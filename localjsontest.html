@@ -6,24 +6,32 @@
     </head>
     <body>
         <h1>JSON Tester</h1>
-
-        <ul>
-            <li>Home</li>
-            <li>Life during war</li>
-            <li>Wepons of war</li>
-            <li>War Heroes</li>        
-        </ul>
+        
+        <div class="header">
+            <div classs="nav">
+                <ul>
+                    <li><a href="#" onclick="getPage('home.html')">Home</a></li>
+                    <li><a href="#" onclick="getPage('lifeduringwar.html')">Life during war</a></li>
+                    <li><a href="#" onclick="getPage('weponsofwar.html')">Wepons of war</a></li>
+                    <li><a href="#" onclick="getPage('warheroes.html')">War Heroes</a></li>   
+                </ul>
+            </div>
+        </div>
+        
+        <div class="viewer" id="viewer">
+            test
+        </div>
 
         <header></header>
         <section></section>
-        
+
         <div id="elem"></div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<!--        <script src="test.js"></script>-->
-<!--        <script src="testingPattern.js"></script>-->
-<!--        <script src="revPattern.js"></script>-->
+        <!--        <script src="test.js"></script>-->
+        <!--        <script src="testingPattern.js"></script>-->
+        <!--        <script src="revPattern.js"></script>-->
         <script src="contentLoader.js"></script>
         <script src="pageUpdater.js"></script>
 
