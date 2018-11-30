@@ -62,26 +62,26 @@ var pageUpdater = (function(){
 
 // changes the page. call this after page is created? need page builder?
 function getPage(page) {
-    var xhttpReq = new XMLHttpRequest();
+    var request = new XMLHttpRequest();
 
     var section = document.querySelector('section'); 
 
     console.log("Page: ",page);
 
+    //DONT NEED THE IFS ANYMORE ONCE WE START TEMPLATING
+    // IFS ARE NOT USING THE getPage stuff
+    
     if (page == "warheroes.html") {
         // War Hero Page Loader
         contentLoader.loadJson('test.json', function(err, datums) {
             if (err) { throw err; }   
             console.log("HERE IS LANCHED")
-            document.getElementById('elem').innerHTML = datums['members'][1].name; 
-
+            document.getElementById('elem').innerHTML = datums['members'][1].name;
 
             // create warhero page
             function showHeroes(jsonObj) {
 
                 var heroes = jsonObj['members'];
-                
-                console.log("heroJson", heroes)
 
                 for (var i = 0; i < heroes.length; i++) {
                     var myArticle = document.createElement('article');
@@ -119,27 +119,26 @@ function getPage(page) {
 
     }
     else if (page == "weponsofwar.html") {
-             console.log("Woop");
-        
+        console.log("Woop");
+
         contentLoader.loadJson('wepons.json', function(err, datums) {
             if (err) { throw err; }   
-            
-            document.getElementById('elem').innerHTML = datums['guns'][1].name;
-            
+
+
+
             // create wepons of war page
             function showGuns(jsonObj) {
 
                 var weponsJson = jsonObj['guns'];
 
                 console.log("WeponJson", weponsJson)
-                    
+
                 for (var i = 0; i < weponsJson.length; i++) {
                     var myArticle = document.createElement('article');
-                    var myH2 = document.createElement('h2');
-                                       
+                    var myH2 = document.createElement('h2'); 
 
                     myH2.textContent = weponsJson[i].name;                    
-                    
+
                     myArticle.appendChild(myH2);
 
                     section.appendChild(myArticle);
@@ -149,25 +148,67 @@ function getPage(page) {
             section.innerHTML = "";
             showGuns(datums);
         });                        
-     
-        
-        
+
+
+
+    }
+    else if (page == "lifeduringwar.html") {        
+
+        section.innerHTML = "";
+        //        contentLoader.loadJson('wepons.json', function(err, datums) {
+        //            if (err) { throw err; }    
+        //            
+        //            // create wepons of war page
+        //            function showGuns(jsonObj) {
+        //                var weponsJson = jsonObj['guns'];
+        //                console.log("WeponJson", weponsJson)
+        //                    
+        //                for (var i = 0; i < weponsJson.length; i++) {
+        //                    var myArticle = document.createElement('article');
+        //                    var myH2 = document.createElement('h2');
+        //                                       
+        //                    myH2.textContent = weponsJson[i].name;  
+        //                    myArticle.appendChild(myH2);
+        //
+        //                    section.appendChild(myArticle);
+        //                }
+        //            } 
+        //            //make clear page function
+        //            section.innerHTML = "";
+        //            showGuns(datums);
+        //        });     
+
     }
     else {
         //make clear page function
+        console.log("HERERERE")
         section.innerHTML = "";
     }
 
     //loadpage to viewer
-    xhttpReq.onreadystatechange = function() {
-        if(this.readyState ==4 && this.status == 200) {
-            document.getElementById('viewer').innerHTML = this.responseText;
+    request.onreadystatechange = function() {
+        if(this.readyState ==4 && this.status == 200) {            
+                        
+            var myDiv = document.getElementById('viewer');
+            myDiv.innerHTML = this.responseText;
+
+            var myScripts = myDiv.getElementsByTagName("script");
+            if (myScripts.length > 0) {
+                eval(myScripts[0].innerHTML);
+            }
+
+//            document.getElementById('viewer').innerHTML = this.response;
+
+
+            console.log('Resp', this.responseText)
         }
     }
 
-    xhttpReq.open('GET', page, true);
-    xhttpReq.send();
+    request.open('GET', page, true);
+    request.send();
 }
+
+
 
 
 
