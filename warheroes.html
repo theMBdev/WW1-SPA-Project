@@ -1,57 +1,34 @@
-
-
-<h3>Name</h3>
-<h3>Age</h3>
-
-<article>
-    <h2>Molecule Man</h2>
-    <p>Secret identity: Dan Jukes</p>
-    <p>Age: 29</p><p>Superpowers:</p>
-    <ul>
-        <li>Radiation resistance</li>
-        <li>Turning tiny</li>
-        <li>Radiation blast</li>
-    </ul>
-</article>
-
 <body>
-<h1>War Heroes</h1>
-    
+    <h1>War Heroes</h1>
+
     <div id="cont">f</div>
-    
+
 </body>
 
 <script>
 
- const person = {
-    name: 'Wes',
-    job: 'Web Developer',
-    city: 'Hamilton',
-    bio: 'Wes is a really cool guy that loves to teach web development!'
-}
- 
- // And then create our markup: Load json here this should be your json file
- // loop this to catch all
-// store json in a thing like person
-//https://wesbos.com/template-strings-html/   <<shows loops
-const markup = `
-<article>
-    <h2>${heroes[i].name}</h2>
-    <p>Secret identity: ${heroes[i].secretIdentity}</p>
-    <p>Age: ${heroes[i].age}</p><p>Superpowers:</p>
-    <ul>
-        <li>${heroes[i].powers}</li>
-        <li>${heroes[i].powers}</li>
-        <li>${heroes[i].powers}</li>
-    </ul>
-</article>
-`;
+// load war heros json data
+contentLoader.loadJson('test.json', function(err, datums) {
+    if (err) { throw err; }    
 
-document.getElementById('cont').innerHTML = markup;
- 
+    // json data
+    var heroes = datums['members'];    
+
+    // And then create our markup: Load json here this should be your json file
+    // loop this to catch all
+    // store json in a thing like person
+    //https://wesbos.com/template-strings-html/   <<shows loops
+    const markup = `
+    <ul class="heroes">
+        ${heroes.map(hero => `<li>${hero.name} is ${hero.age * 7}</li>`)}
+    </ul>
+    `;
+
+    document.getElementById('cont').innerHTML = markup;
+
+});
 </script>
 
 <!--So in here you would load your json data in and pass it into the template above and then call this and that would load your page-->
 
 <!--load json by calling the functions-->
-   

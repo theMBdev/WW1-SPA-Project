@@ -71,119 +71,7 @@ function getPage(page) {
     //DONT NEED THE IFS ANYMORE ONCE WE START TEMPLATING
     // IFS ARE NOT USING THE getPage stuff
     
-    if (page == "warheroes.html") {
-        // War Hero Page Loader
-        contentLoader.loadJson('test.json', function(err, datums) {
-            if (err) { throw err; }   
-            console.log("HERE IS LANCHED")
-            document.getElementById('elem').innerHTML = datums['members'][1].name;
 
-            // create warhero page
-            function showHeroes(jsonObj) {
-
-                var heroes = jsonObj['members'];
-
-                for (var i = 0; i < heroes.length; i++) {
-                    var myArticle = document.createElement('article');
-                    var myH2 = document.createElement('h2');
-                    var myPara1 = document.createElement('p');
-                    var myPara2 = document.createElement('p');
-                    var myPara3 = document.createElement('p');
-                    var myList = document.createElement('ul');
-
-                    myH2.textContent = heroes[i].name;
-                    myPara1.textContent = 'Secret identity: ' + heroes[i].secretIdentity;
-                    myPara2.textContent = 'Age: ' + heroes[i].age;
-                    myPara3.textContent = 'Superpowers:';
-
-                    var superPowers = heroes[i].powers;
-                    for (var j = 0; j < superPowers.length; j++) {
-                        var listItem = document.createElement('li');
-                        listItem.textContent = superPowers[j];
-                        myList.appendChild(listItem);
-                    }
-
-                    myArticle.appendChild(myH2);
-                    myArticle.appendChild(myPara1);
-                    myArticle.appendChild(myPara2);
-                    myArticle.appendChild(myPara3);
-                    myArticle.appendChild(myList);
-
-                    section.appendChild(myArticle);
-                }
-            } 
-            //make clear page function
-            section.innerHTML = "";
-            showHeroes(datums);
-        });
-
-    }
-    else if (page == "weponsofwar.html") {
-        console.log("Woop");
-
-        contentLoader.loadJson('wepons.json', function(err, datums) {
-            if (err) { throw err; }   
-
-
-
-            // create wepons of war page
-            function showGuns(jsonObj) {
-
-                var weponsJson = jsonObj['guns'];
-
-                console.log("WeponJson", weponsJson)
-
-                for (var i = 0; i < weponsJson.length; i++) {
-                    var myArticle = document.createElement('article');
-                    var myH2 = document.createElement('h2'); 
-
-                    myH2.textContent = weponsJson[i].name;                    
-
-                    myArticle.appendChild(myH2);
-
-                    section.appendChild(myArticle);
-                }
-            } 
-            //make clear page function
-            section.innerHTML = "";
-            showGuns(datums);
-        });                        
-
-
-
-    }
-    else if (page == "lifeduringwar.html") {        
-
-        section.innerHTML = "";
-        //        contentLoader.loadJson('wepons.json', function(err, datums) {
-        //            if (err) { throw err; }    
-        //            
-        //            // create wepons of war page
-        //            function showGuns(jsonObj) {
-        //                var weponsJson = jsonObj['guns'];
-        //                console.log("WeponJson", weponsJson)
-        //                    
-        //                for (var i = 0; i < weponsJson.length; i++) {
-        //                    var myArticle = document.createElement('article');
-        //                    var myH2 = document.createElement('h2');
-        //                                       
-        //                    myH2.textContent = weponsJson[i].name;  
-        //                    myArticle.appendChild(myH2);
-        //
-        //                    section.appendChild(myArticle);
-        //                }
-        //            } 
-        //            //make clear page function
-        //            section.innerHTML = "";
-        //            showGuns(datums);
-        //        });     
-
-    }
-    else {
-        //make clear page function
-        console.log("HERERERE")
-        section.innerHTML = "";
-    }
 
     //loadpage to viewer
     request.onreadystatechange = function() {
@@ -198,9 +86,7 @@ function getPage(page) {
             }
 
 //            document.getElementById('viewer').innerHTML = this.response;
-
-
-            console.log('Resp', this.responseText)
+//            console.log('Resp', this.responseText)
         }
     }
 

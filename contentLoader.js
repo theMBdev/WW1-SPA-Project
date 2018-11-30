@@ -4,18 +4,18 @@ to the appropriate display routine eg the slide manager; the page updater etc
 */
 var contentLoader = (function() {     
 
-    var testString = 'BooYaa';
-
-    var getString = function() {        
-        console.log("test", testString);        
-        testString = {
-            test: 'str'
-        };
-        console.log('My test', testString.test);
-        var myJSON = JSON.stringify(testString);
-        console.log('My Json', myJSON);
-        return testString;
-    }
+//    var testString = 'BooYaa';
+//
+//    var getString = function() {        
+//        console.log("test", testString);        
+//        testString = {
+//            test: 'str'
+//        };
+//        console.log('My test', testString.test);
+//        var myJSON = JSON.stringify(testString);
+//        console.log('My Json', myJSON);
+//        return testString;
+//    }
 
     //load content 
     var loadJson = function (jsonFile, done) {  
@@ -26,11 +26,13 @@ var contentLoader = (function() {
         request.responseType = 'json';
 
         request.onload = function() {
+            //callback
             done(null, request.response);
             return request.response;
         };
 
         request.onerror = function() {
+            //callback
             done(request.response);
         };
 
@@ -39,7 +41,7 @@ var contentLoader = (function() {
 
     return {
         loadJson : loadJson,
-        getString : getString
+//        getString : getString
     } 
 })();
 
@@ -49,6 +51,6 @@ contentLoader.loadJson('test.json', function(err, datums) {
     console.log('Outside', datums['members'][1].name);
 });
 
-console.log('CONSOLE',contentLoader.getString());
+//console.log('CONSOLE',contentLoader.getString());
 
 
