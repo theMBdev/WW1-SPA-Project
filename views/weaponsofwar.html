@@ -1,0 +1,35 @@
+<body>
+    <h1>Wepons</h1>
+
+    <div id="cont">f</div>
+
+</body>
+
+<script>
+
+// load wepons json
+contentLoader.loadJson('wepons.json', function(err, jsonData) {
+    if (err) { throw err; }    
+
+    var wepons = jsonData['guns'];    
+
+    // And then create our markup: Load json here this should be your json file
+    // loop this to catch all
+    // store json in a thing like person
+    //https://wesbos.com/template-strings-html/   <<shows loops
+    const markup = `
+    <ul class="guns">
+        ${wepons.map(gun => `<li>${gun.name} is ${gun.age * 7}</li>`)}
+    </ul>
+    `;
+
+    document.getElementById('cont').innerHTML = markup;
+
+});
+</script>
+
+<!--So in here you would load your json data in and pass it into the template above and then call this and that would load your page-->
+
+<!--load json by calling the functions-->
+
+

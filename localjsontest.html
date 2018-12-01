@@ -13,16 +13,16 @@
         <div class="header">
             <div classs="nav">
                 <ul>
-                    <li><a href="#" onclick="getPage('home.html')">Home</a></li>
-                    <li><a href="#" onclick="getPage('lifeduringwar.html')">Life during war</a></li>
-                    <li><a href="#" onclick="getPage('weponsofwar.html')">Wepons of war</a></li>
-                    <li><a href="#" onclick="getPage('warheroes.html')">War Heroes</a></li>   
+                    <li><a href="#" onclick="pageUpdater.getPage('home.html')">Home</a></li>
+                    <li><a href="#" onclick="pageUpdater.getPage('./views/lifeduringwar.html')">Life during war</a></li>
+                    <li><a href="#" onclick="pageUpdater.getPage('./views/weaponsofwar.html')">Weapons of war</a></li>
+                    <li><a href="#" onclick="pageUpdater.getPage('./views/warheroes.html')">War Heroes</a></li>   
                 </ul>
             </div>
-        </div>
+        </div>                
         
         <div class="viewer" id="viewer">
-            test
+            
         </div>
 
         <header></header>
@@ -32,13 +32,19 @@
 
         <div id="elem"></div>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        </script>
 
         <!--        <script src="test.js"></script>-->
         <!--        <script src="testingPattern.js"></script>-->
         <!--        <script src="revPattern.js"></script>-->
         <script src="contentLoader.js"></script>
         <script src="pageUpdater.js"></script>
+        
+        <script>
+        // load home page
+        pageUpdater.getPage('home.html');
+        </script>
 
     </body>
 </html>

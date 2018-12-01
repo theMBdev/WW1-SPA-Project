@@ -1,18 +1,18 @@
 <body>
     <h1>War Heroes</h1>
 
-    <div id="cont">f</div>
+    <div id="cont"></div>
 
 </body>
 
 <script>
 
 // load war heros json data
-contentLoader.loadJson('test.json', function(err, datums) {
+contentLoader.loadJson('test.json', function(err, jsonData) {
     if (err) { throw err; }    
 
     // json data
-    var heroes = datums['members'];    
+    var heroes = jsonData['members'];    
 
     // And then create our markup: Load json here this should be your json file
     // loop this to catch all
