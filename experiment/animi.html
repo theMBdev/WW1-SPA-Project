@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    </head>
+    <style>
+        #myContainer {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            background: yellow;            
+        }
+        #myAnimation {
+            width: 50px;
+            height: 50px;            
+            background-color: rgba(255, 0, 0, 0.8);
+            position: absolute;
+            right: 0px;
+            font-size: 150px;
+        }
+    </style>
+    <body>
+
+        <p>
+            <button id="myButton" onclick="myMove()">Click Me</button> 
+        </p>
+
+        <div id ="myContainer">
+            <div id ="myAnimation">1</div>
+        </div>
+
+        <script>
+
+ 
+         
+
+function myMove() {
+    var elem = document.getElementById("myAnimation");   
+    var pos = -350;
+    var id = setInterval(frame, 10);
+    function frame() {
+        if (pos == -300) {
+            clearInterval(id);
+             $( "#myAnimation" ).show();
+             elem.style.left = 350 + 'px';               
+        } else {
+            pos++;    
+            elem.style.left = - + pos + 'px'; 
+            $( "#myAnimation" ).fadeOut( "fast" );
+        }
+    }
+}
+        </script>
+
+    </body>
+</html>

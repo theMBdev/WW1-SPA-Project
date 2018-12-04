@@ -1,7 +1,9 @@
 <!-- IS A HTML PAGE CHANGE TO JS-->
 <!DOCTYPE html>
 <html>
-    <head>
+    <head>    
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
             * {box-sizing: border-box}
@@ -12,8 +14,11 @@
             /* Slideshow container */
             .slideshow-container {
                 max-width: 400px;
+                height: 300px; /*Reomove for dynamic height*/
                 position: relative;
                 margin: auto;
+                background-color: azure;
+
             }
 
             /* Next & previous buttons */
@@ -33,7 +38,7 @@
                 background-color: rgba(0,0,0,0.4);
             }
 
-            /* Position the "next button" to the right */
+            /* Position the "next button" to the left */
             .prev {
                 left: -50px;
                 border-radius: 3px 0 0 3px;
@@ -95,11 +100,25 @@
                 animation-duration: 1.5s;
             }
 
-            .slidingAnim {
-                position: relative;
-                font-size: 100px;
-                left: 100px;
+            #numberAniContainer {                
+                position: relative;                 
+                top: -190px;
+                float: right;               
             }
+            
+            #currentNumberAni {  
+                position: absolute;
+                right: 50px;
+                font-size: 150px;
+            }
+
+            #incomingNumberAni {     
+                position: absolute;
+                right: -20px;
+                font-size: 150px;
+                display: none;
+            }
+
 
             @-webkit-keyframes fade {
                 from {opacity: .4} 
@@ -124,7 +143,7 @@
         <div class="slideshow-container">
 
             <div class="mySlides fade">
-                <div class="numbertext">1 / 3</div>
+<!--                <div class="numbertext">1 / 3</div>-->
                 <div class="mySlides__title"><h2>FIRST</h2></div>
                 <div class="mySlides__text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur mattis libero, non sagittis est cursus vitae. Maecenas orci nisi, cursus non congue id, dictum sit amet odio. Morbi porta orci a nibh dictum condimentum. Maecenas erat magna, ultricies id fringilla ac, finibus non turpis. Pellentesque non pellentesque velit. Etiam at ultricies lorem, non feugiat sapien.</p></div>
                 <!--  <img src="img_nature_wide.jpg" style="width:100%">-->
@@ -132,7 +151,7 @@
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">2 / 3</div>
+<!--                <div class="numbertext">2 / 3</div>-->
                 <div class="mySlides__title"><h2>MIDDLE</h2></div>
                 <div class="mySlides__text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur mattis libero, non sagittis est cursus vitae. Maecenas orci nisi, cursus non congue id, dictum sit amet odio. Morbi porta orci a nibh dictum condimentum. Maecenas erat magna, ultricies id fringilla ac, finibus non turpis. Pellentesque non pellentesque velit. Etiam at ultricies lorem, non feugiat sapien.</p></div>
                 <!--  <img src="img_snow_wide.jpg" style="width:100%">-->
@@ -140,12 +159,13 @@
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">3 / 3</div>
+<!--                <div class="numbertext">3 / 3</div>-->
                 <div class="mySlides__title"><h2>LAST</h2></div>
                 <div class="mySlides__text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur mattis libero, non sagittis est cursus vitae. Maecenas orci nisi, cursus non congue id, dictum sit amet odio. Morbi porta orci a nibh dictum condimentum. Maecenas erat magna, ultricies id fringilla ac, finibus non turpis. Pellentesque non pellentesque velit. Etiam at ultricies lorem, non feugiat sapien.</p></div>
                 <!--  <img src="img_mountains_wide.jpg" style="width:100%">-->
                 <!--  <div class="text">Caption Three</div>-->
             </div>
+
 
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -156,75 +176,101 @@
         <div style="text-align:center">
             <span class="dot" onclick="currentSlide(1)"></span> 
             <span class="dot" onclick="currentSlide(2)"></span> 
-            <span class="dot" onclick="currentSlide(3)"></span> 
-            <div class="slidingAnim">1</div>
+            <span class="dot" onclick="currentSlide(3)" ></span> 
+
         </div>
-        
-        
+
+        <div id ="numberAniContainer">
+            <div id ="currentNumberAni">1</div>
+            <div id ="incomingNumberAni">2</div>
+        </div>
 
         <script>
 
-            //    to build the html need to know how many slides there are
-            //    loop and print the html
-            //    
+//    to build the html need to know how many slides there are
+//    loop and print the html
+//    
 
-            //animation test
-            var slides = document.getElementsByClassName("slidingAnim");
+//animation test
 
-            function myMove() {
-                var elem = document.getElementById("slidingAnim");   
-                var pos = 0;
-                var id = setInterval(frame, 5);
-                function frame() {
-                    if (pos == 350) {
-                        clearInterval(id);
-                    } else {
-                        pos++; 
-                        elem.style.top = pos + 'px'; 
-                        elem.style.left = pos + 'px'; 
-                    }
-                }
-            }
+function myMove(slideNum) {
+    var elem = document.getElementById("currentNumberAni");   
+    var elem2 = document.getElementById("incomingNumberAni");   
+    var pos = 50;
+    var pos2 = -20;
+    var id = setInterval(frame, 10);
+    function frame() {
+        if (pos == 120) {
+            clearInterval(id);
+            
+            $( "#currentNumberAni" ).show();
+            $( "#incomingNumberAni" ).hide();
+            
+            elem2.style.right = -20 + 'px';   
+            
+            elem.style.right = 50 + 'px';              
+            elem.innerHTML = slideNum; // you change this to slide num
+            
+        } else {
+            pos++;    
+            pos2++;               
+                        
+            elem.style.right = pos + 'px'; 
+            
+            elem2.style.right = pos2 + 'px'; 
+            elem2.innerHTML = slideNum; // you change this to comming slide num
+
+            $( "#currentNumberAni" ).fadeOut( "medium" );
+            $( "#incomingNumberAni" ).fadeIn( "medium" );
+        }
+    }
+}
 
 
 
-            // slide start
-            var slideIndex = 1;
-            showSlides(slideIndex);
 
-            function plusSlides(n) {
-                showSlides(slideIndex += n);
-            }
 
-            function currentSlide(n) {
-                showSlides(slideIndex = n);
-            }
+// slide start
+var slideIndex = 1;
+showSlides(slideIndex);
 
-            function showSlides(n) {
-                var i;
-                var slides = document.getElementsByClassName("mySlides");
-                var dots = document.getElementsByClassName("dot");
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+    console.log('Click', myMove(slideIndex));
+    console.log('Plus', slideIndex);
+}
 
-                // go back to slide one
-                if (n > slides.length) {slideIndex = 1} 
-                // go to last slide
-                if (n < 1) {slideIndex = slides.length}
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+    console.log('Click', myMove(slideIndex)); 
+    console.log('Current', slideIndex);
+}
 
-                // hide all slides
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";  
-                }
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
 
-                // 
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace("active", "");
-                }
+    // go back to slide one
+    if (n > slides.length) {slideIndex = 1} 
+    // go to last slide
+    if (n < 1) {slideIndex = slides.length}
 
-                // show first slide
-                slides[slideIndex - 1].style.display = "block"; 
-                // darken first dot
-                dots[slideIndex - 1].className += " active";
-            }
+    // hide all slides
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+
+    // 
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace("active", "");
+    }
+
+    // show first slide
+    slides[slideIndex - 1].style.display = "block"; 
+    // darken first dot
+    dots[slideIndex - 1].className += " active";
+}
 
         </script>
 

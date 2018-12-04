@@ -1,7 +1,28 @@
-<body>
-    <h1>Wepons</h1>
+<body>   
+    <head>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <meta charset="UTF-8">
+        <title>JSON Tester</title>
 
-    <div id="cont">f</div>
+    </head>
+    <div id="cont"></div>
+
+    <div class="jumbotron">
+        <div class="jumbotron__title">Weapons of War</div>
+        <div class="jumbotron__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lacinia felis et erat vulputate congue. Etiam sed est viverra, accumsan.
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card__image"></div>
+        <div class="card__title"></div>
+        <div class="card__text"></div>
+        <button type="button">Explore</button>
+    </div>
+    
+
+
+
 
 </body>
 
@@ -18,10 +39,10 @@ contentLoader.loadJson('wepons.json', function(err, jsonData) {
     // store json in a thing like person
     //https://wesbos.com/template-strings-html/   <<shows loops
     const markup = `
-    <ul class="guns">
-        ${wepons.map(gun => `<li>${gun.name} is ${gun.age * 7}</li>`)}
+<ul class="guns">
+${wepons.map(gun => `<li>${gun.name} is ${gun.age * 7}</li>`)}
     </ul>
-    `;
+`;
 
     document.getElementById('cont').innerHTML = markup;
 
