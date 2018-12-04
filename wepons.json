@@ -4,34 +4,17 @@
         {
             "name": "AK-47",
             "age": 29,
-            "secretIdentity": "Dan Jukes",
-            "powers": [
-                "Radiation resistance",
-                "Turning tiny",
-                "Radiation blast"
-            ]
+            "secretIdentity": "Dan Jukes"
         },
         {
             "name": "M4",
             "age": 39,
-            "secretIdentity": "Jane Wilson",
-            "powers": [
-                "Million tonne punch",
-                "Damage resistance",
-                "Superhuman reflexes"
-            ]
+            "secretIdentity": "Jane Wilson"
         },
         {
             "name": "Scar",
             "age": 1000000,
-            "secretIdentity": "Unknown",
-            "powers": [
-                "Immortality",
-                "Heat Immunity",
-                "Inferno",
-                "Teleportation",
-                "Interdimensional travel"
-            ]
+            "secretIdentity": "Unknown"
         }
     ]
 }

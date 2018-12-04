@@ -4,7 +4,6 @@ to the appropriate display routine eg the slide manager; the page updater etc
 */
 var contentLoader = (function() {     
 
-//    var testString = 'BooYaa';
 //
 //    var getString = function() {        
 //        console.log("test", testString);        

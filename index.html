@@ -1,85 +1,50 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>title</title>
+<html lang="en">
+    <head>
         <link rel="stylesheet" href="style.css" type="text/css">
-      
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  </head>
-  <body>
-  
-     <header></header>
-     <section></section>
-            
-  </body>
-    
-    <script>
-        var header = document.querySelector('header');
-        var section = document.querySelector('section');        
-
-        var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
-
-        var request = new XMLHttpRequest();
-        request.open('GET', requestURL);
-
-        request.responseType = 'json';
-        request.send();
-
-        request.onload = function() {
-        var superHeroes = request.response;
-        populateHeader(superHeroes);
-        showHeroes(superHeroes);
-        }
+        <meta charset="UTF-8">
+        <title>JSON Tester</title>
         
-        function populateHeader(jsonObj) {
-        var myH1 = document.createElement('h1');
-        myH1.textContent = jsonObj['squadName'];
-        header.appendChild(myH1);
-
-        var myPara = document.createElement('p');
-        myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + ' // Formed: ' + jsonObj['formed'];
-        header.appendChild(myPara);     
-        }
-
-        function showHeroes(jsonObj) {
-        var heroes = jsonObj['members'];
-      
-        for (var i = 0; i < heroes.length; i++) {
-        var myArticle = document.createElement('article');
-        var myH2 = document.createElement('h2');
-        var myPara1 = document.createElement('p');
-        var myPara2 = document.createElement('p');
-        var myPara3 = document.createElement('p');
-        var myList = document.createElement('ul');
-
-        myH2.textContent = heroes[i].name;
-        myPara1.textContent = 'Secret identity: ' + heroes[i].secretIdentity;
-        myPara2.textContent = 'Age: ' + heroes[i].age;
-        myPara3.textContent = 'Superpowers:';
-
-        var superPowers = heroes[i].powers;
-            for (var j = 0; j < superPowers.length; j++) {
-                var listItem = document.createElement('li');
-                listItem.textContent = superPowers[j];
-                myList.appendChild(listItem);
-            }
-
-        myArticle.appendChild(myH2);
-        myArticle.appendChild(myPara1);
-        myArticle.appendChild(myPara2);
-        myArticle.appendChild(myPara3);
-        myArticle.appendChild(myList);
-
-        section.appendChild(myArticle);
-      }
-    }
-
-    </script>
+    </head>
     
+    <body>
+        <h1>Title</h1>
+        
+        <div class="header">
+            <div classs="nav">
+                <ul>
+                    <li><a href="#" onclick="pageUpdater.getPage('home.html')">Home</a></li>
+                    <li><a href="#" onclick="pageUpdater.getPage('./views/lifeduringwar.html')">Life during war</a></li>
+                    <li><a href="#" onclick="pageUpdater.getPage('./views/weaponsofwar.html')">Weapons of war</a></li>
+                    <li><a href="#" onclick="pageUpdater.getPage('./views/warheroes.html')">War Heroes</a></li>   
+                </ul>
+            </div>
+        </div>                
+        
+        <div class="viewer" id="viewer">
+            
+        </div>
 
-    
-   
-   
-    
+        <header></header>
+        <section></section>
+        
+        <div id="app"></div>
+
+        <div id="elem"></div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        </script>
+
+        <!--        <script src="test.js"></script>-->
+        <!--        <script src="testingPattern.js"></script>-->
+        <!--        <script src="revPattern.js"></script>-->
+        <script src="contentLoader.js"></script>
+        <script src="pageUpdater.js"></script>
+        
+        <script>
+        // load home page
+        pageUpdater.getPage('home.html');
+        </script>
+
+    </body>
 </html>

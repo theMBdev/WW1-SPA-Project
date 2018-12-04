@@ -1,10 +1,10 @@
 {
-   "homeTown": "Metro City", 
+   "homeTown": "Glasgow", 
     "members": [
         {
-            "name": "Molecule Man",
+            "name": "Random name",
             "age": 29,
-            "secretIdentity": "Dan Jukes",
+            
             "powers": [
                 "Radiation resistance",
                 "Turning tiny",
@@ -12,9 +12,9 @@
             ]
         },
         {
-            "name": "Madame Uppercut",
+            "name": "Random name 2",
             "age": 39,
-            "secretIdentity": "Jane Wilson",
+            
             "powers": [
                 "Million tonne punch",
                 "Damage resistance",
@@ -22,9 +22,9 @@
             ]
         },
         {
-            "name": "Eternal Flame",
+            "name": "Random name 3",
             "age": 1000000,
-            "secretIdentity": "Unknown",
+            
             "powers": [
                 "Immortality",
                 "Heat Immunity",

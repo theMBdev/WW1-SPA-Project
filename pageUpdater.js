@@ -21,9 +21,6 @@ var pageUpdater = (function(){
                 if (myScripts.length > 0) {
                     eval(myScripts[0].innerHTML);
                 }
-
-                //            document.getElementById('viewer').innerHTML = this.response;
-                //            console.log('Resp', this.responseText)
             }
         }
 

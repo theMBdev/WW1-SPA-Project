@@ -14,10 +14,6 @@ contentLoader.loadJson('test.json', function(err, jsonData) {
     // json data
     var heroes = jsonData['members'];    
 
-    // And then create our markup: Load json here this should be your json file
-    // loop this to catch all
-    // store json in a thing like person
-    //https://wesbos.com/template-strings-html/   <<shows loops
     const markup = `
     <ul class="heroes">
         ${heroes.map(hero => `<li>${hero.name} is ${hero.age * 7}</li>`)}
@@ -32,3 +28,5 @@ contentLoader.loadJson('test.json', function(err, jsonData) {
 <!--So in here you would load your json data in and pass it into the template above and then call this and that would load your page-->
 
 <!--load json by calling the functions-->
+
+
