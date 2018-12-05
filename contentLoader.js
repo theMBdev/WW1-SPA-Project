@@ -44,11 +44,11 @@ var contentLoader = (function() {
     } 
 })();
 
-contentLoader.loadJson('test.json', function(err, datums) {
-    if (err) { throw err; }    
-
-    console.log('Outside', datums['members'][1].name);
-});
+//contentLoader.loadJson('test.json', function(err, datums) {
+//    if (err) { throw err; }    
+//
+//    console.log('Outside', datums['members'][1].name);
+//});
 
 //console.log('CONSOLE',contentLoader.getString());
 

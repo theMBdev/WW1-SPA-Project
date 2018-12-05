@@ -1,0 +1,228 @@
+<body>   
+    <head>
+<!--        <link rel="stylesheet" href="style.css" type="text/css">-->
+        <meta charset="UTF-8">
+        <title>JSON Tester</title>
+
+    </head>
+
+
+    <title>Page with slide</title>
+
+    <div id="slide"></div>
+
+
+
+<!--
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">              
+            <div class="mySlides__title">
+                <h2>one</h2>
+            </div>
+
+            <div class="mySlides__text">
+                <p>this</p>
+            </div>
+
+        </div>      
+
+        <div class="mySlides fade">              
+            <div class="mySlides__title">
+                <h2>two</h2>
+            </div>
+
+            <div class="mySlides__text">
+                <p>pilou</p>
+            </div>
+
+        </div>      
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <a class="next" id="plus")>&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)" ></span> 
+
+    </div>
+-->
+
+
+
+<!--
+
+// animate number
+function myMove(slideNum) {
+    var elem = document.getElementById("currentNumberAni");   
+    var elem2 = document.getElementById("incomingNumberAni");   
+    var pos = 50;
+    var pos2 = -20;
+    var id = setInterval(frame, 10);
+
+    //if(pos == 50){
+    console.log('click');
+    function frame() {
+        if (pos >= 120) {
+            clearInterval(id);           
+
+            $( "#currentNumberAni" ).show();
+            $( "#incomingNumberAni" ).hide();
+
+            elem2.style.right = -20 + 'px';   
+
+            elem.style.right = 50 + 'px';              
+            elem.innerHTML = slideNum; // number shown
+
+        } else {            
+            pos+=1 ;    
+            pos2+=1 ;  
+            elem.style.right = pos + 'px'; 
+            elem2.style.right = pos2 + 'px'; 
+            
+            elem2.innerHTML = slideNum; // number shown
+
+            $( "#currentNumberAni" ).fadeOut( "medium" );
+            $( "#incomingNumberAni" ).fadeIn( "medium" );
+        }
+    }
+}
+
+-->
+<script>
+
+// load wepons json
+contentLoader.loadJson('slidedata.json', function(err, jsonData) {
+    if (err) { throw err; }    
+
+    console.log('Data slide', jsonData['slideshow1'])
+    var slide = jsonData['slideshow1'];    
+
+    console.log(slide[1].title);
+    console.log(slide[0].body);
+
+    console.log(slide[2].title);
+    console.log(slide[1].body);
+
+
+
+    const markup = `
+
+<div class="slideshow-container">
+
+${slide.map(slideData =>
+
+            `<div class="mySlides fade">              
+<div class="mySlides__title">
+<h2>${slideData.title}</h2>
+        </div>
+
+<div class="mySlides__text">
+<p>${slideData.body}</p>
+        </div>
+
+        </div>`
+           )}
+
+<a href="#" onclick="pageUpdater.getPage('./views/weaponsofwar.html')">Weapons of war</a></li>
+
+<a class="prev" onclick="pageUpdater.getPage('./views/weaponsofwar.html') ">&#10094;</a>
+
+<a class="next" id="plus")>&#10095;</a>
+
+        </div>
+<br>
+
+<div style="text-align:center">
+<span class="dot" onclick="currentSlide(1)"></span> 
+<span class="dot" onclick="currentSlide(2)"></span> 
+<span class="dot" onclick="currentSlide(3)" ></span> 
+
+        </div>
+
+`;
+
+    // above attatched page updator to left slide button and it changed the page, create a new contentLoader function
+    // that pulls in the next slide from the json file !!!solution
+    
+    document.getElementById('slide').innerHTML = markup;
+});
+
+
+
+
+// slideshow
+document.addEventListener("DOMContentLoaded", theDomHasLoaded, false);
+window.addEventListener("load", pageFullyLoaded, false);
+
+function theDomHasLoaded(e) {
+    // do something
+}
+
+function pageFullyLoaded(e) {
+    // do something again
+}
+
+
+var slideIndex = 1;
+// Start by calling main slide function
+showSlides(slideIndex);
+
+//??
+// new addEventListener replaces inline onclick()
+document.getElementById("plus").addEventListener("click", myFunc, false);
+document.getElementById("plus").myParam = 1;
+function myFunc(evt) 
+{
+    showSlides(slideIndex += evt.target.myParam);	
+}
+
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+    myMove(slideIndex);   
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+    myMove(slideIndex);    
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+
+    // go back to slide one
+    if (n > slides.length) {slideIndex = 1} 
+    // go to last slide
+    if (n < 1) {slideIndex = slides.length}
+
+    // hide all slides
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+
+    // 
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace("active", "");
+    }
+
+    // show first slide
+    slides[slideIndex - 1].style.display = "block"; 
+    // darken first dot
+    dots[slideIndex - 1].className += " active";
+}
+
+
+
+    </script>
+
+</body>
+
+

@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="style.css" type="text/css">
+          <link rel="stylesheet" href="style.css" type="text/css">
         <meta charset="UTF-8">
         <title>JSON Tester</title>
-        
+        <style>
+
+        </style>
     </head>
+
+
+
+    
     
     <body>
         <h1>Title</h1>
-        
+
         <div class="header">
             <div classs="nav">
                 <ul>
@@ -17,22 +23,26 @@
                     <li><a href="#" onclick="pageUpdater.getPage('./views/lifeduringwar.html')">Life during war</a></li>
                     <li><a href="#" onclick="pageUpdater.getPage('./views/weaponsofwar.html')">Weapons of war</a></li>
                     <li><a href="#" onclick="pageUpdater.getPage('./views/warheroes.html')">War Heroes</a></li>   
+                    <li><a href="#" onclick="pageUpdater.getPage('./pagewithslide.html')">Page with Slide</a></li>   
                 </ul>
             </div>
         </div>                
-        
+
         <div class="viewer" id="viewer">
-            
+
         </div>
 
         <header></header>
         <section></section>
-        
+
         <div id="app"></div>
 
         <div id="elem"></div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+
+
+
         </script>
 
         <!--        <script src="test.js"></script>-->
@@ -40,10 +50,13 @@
         <!--        <script src="revPattern.js"></script>-->
         <script src="contentLoader.js"></script>
         <script src="pageUpdater.js"></script>
+        <script src="slideManager.js"></script>
+
+                        
         
         <script>
-        // load home page
-        pageUpdater.getPage('home.html');
+// load home page
+pageUpdater.getPage('home.html');
         </script>
 
     </body>

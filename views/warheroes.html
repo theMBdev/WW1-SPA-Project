@@ -18,6 +18,8 @@ contentLoader.loadJson('test.json', function(err, jsonData) {
     <ul class="heroes">
         ${heroes.map(hero => `<li>${hero.name} is ${hero.age * 7}</li>`)}
     </ul>
+<li>
+<a href="#" onclick="pageUpdater.getPage('./views/weaponsofwar.html')">Weapons of war</a></li>
     `;
 
     document.getElementById('cont').innerHTML = markup;

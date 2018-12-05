@@ -1,22 +1,22 @@
 {
-   "??": "??", 
-    
-    "slide-1": [
+   "homeTown": "Glasgow", 
+    "slideshow1": [
         {
             "title": "MILITARISM",
-            "content": 'Militarism was one of the four major causes of the war. It was an “arms race.” Because Britain had a large navy, Germany wanted a large navy too. Germany and France competed to build larger armies. Many nations introduced “universal conscription” (the draft), even in times of peace. For reasons of prestige and self-defense, the more one nation built up its army and navy, the more other nations felt they had to do the same.The expense of the “arms race” fell on civilian populations in the form of high taxes. Between 1870 and 1914, all of the major powers except Great Britain and the United States, doubled the size of their armies.'            
+            "body": "Militarism was one of the four major causes of the war. It was an “arms race.” Because Britain had a large navy, Germany wanted a large navy too. Germany and France competed to build larger armies. Many nations introduced “universal conscription” (the draft), even in times of peace. For reasons of prestige and self-defense, the more one nation built up its army and navy, the more other nations felt they had to do the same.The expense of the “arms race” fell on civilian populations in the form of high taxes. Between 1870 and 1914, all of the major powers except Great Britain and the United States, doubled the size of their armies."
         },
         {
             "title": "ALLIANCES",
-            "content": 'For twenty years, the nations of Europe had been making alliances. It was thought the alliances would promote peace. Each country would be protected by others in case of war, making it foolish for one country to wage war on another. The danger of these alliances was that anargument between two countries could draw all the other nations allied with them into a fight. This is just what happened when a conflict between Austria-Hungary and Serbia led to World War I. In the summer of 1914 there were two alliances. The Triple Alliance composed of Germany, Austria-Hungary, and Italy, stood opposed to the Triple Entente composed of Britain, France, and Russia.'
+            "body": "For twenty years, the nations of Europe had been making alliances. It was thought the alliances would promote peace. Each country would be protected by others in case of war, making it foolish for one country to wage war on another. The danger of these alliances was that anargument between two countries could draw all the other nations allied with them into a fight. This is just what happened when a conflict between Austria-Hungary and Serbia led to World War I. In the summer of 1914 there were two alliances. The Triple Alliance composed of Germany, Austria-Hungary, and Italy, stood opposed to the Triple Entente composed of Britain, France, and Russia."
         },
         {
             "title": "IMPERIALISM",
-            "content": 'Another cause of World War I was that European nations ruled smaller countries, called colonies, and competed with each other to amass more colonies. Gathering colonies is known as IMPERIALISM. The purpose of imperialism was and is to build up national wealth and influence by owning colonies. Both France and Britain had many colonies in Africa and Asia. In the 1880s and 1890s, Germany and Italy decided they wanted a colonial empire too. This global competition for land caused confrontations and conflicts in many places. For example, Great Britain almost went to war with France and the United States during the 1880s over colonies.' 
+            "body": "Another cause of World War I was that European nations ruled smaller countries, called colonies, and competed with each other to amass more colonies. Gathering colonies is known as imperialism. The purpose of imperialism was and is to build up national wealth and influence by owning colonies. Both France and Britain had many colonies in Africa and Asia. In the 1880s and 1890s, Germany and Italy decided they wanted a colonial empire too. This global competition for land caused confrontations and conflicts in many places. For example, Great Britain almost went to war with France and the United States during the 1880s over colonies."
         },
-        {
+            {
             "title": "NATIONALISM",
-            "content": 'In addition to political conflicts, the causes of the war included such forces as nationalism, or pride in one’s country. The belief that one’s own nation or culture is superior to all others, nationalism led European nations to compete to build the largest army and navy. It also gave groups of subject peoples the idea of forming independent nations of their own. Serbians, Czechs, Slovaks, Bosnians and many other peoples living under the rule of the Ottoman or Austro-Hungarian Empires wanted freedom from “foreign” rule'
+            "body": "In addition to political conflicts, the causes of the war included such forces as nationalism, or pride in one’s country. The belief that one’s own nation or culture is superior to all others, nationalism led European nations to compete to build the largest army and navy. It also gave groups of subject peoples the idea of forming independent nations of their own. Serbians, Czechs, Slovaks, Bosnians and many other peoples living under the rule of the Ottoman or Austro-Hungarian Empires wanted freedom from “foreign” rule"
         }
     ]
 }
+
