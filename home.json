@@ -1,0 +1,33 @@
+{
+   "jumboTitle": "Explore The First World War",     
+   "jumboBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lacinia felis et erat vulputate congue. Etiam sed est viverra, accumsan.",
+    
+     "sections": [
+        {
+            "title": "4 MAIN CAUSES OF THE GREAT WAR"
+        },
+         {
+            "title": "WHY WAS IT CALLED THE GREAT WAR",
+             "body": "Great War’ was the most commonly used name for the First World War at the time, although ‘European War’ was also sometimes used. As the first pan-European War since Napoleon, ‘Great’ simply indicated the enormous scale of the conflict, much as we might today talk of a ‘great storm’ or a ‘great flood’. However, the term also had moral connotations. The Allies believed they were fighting against an evil militarism that had taken hold in Germany. ‘Great War’ carried echoes of Armageddon, the biblical Great Battle of Good and Evil to be fought at the end of Time (there was indeed a battle at Megiddo, the site of Armageddon, in September 1918). It was therefore sometimes referred to as ‘the Great War for Civilisation’. Although ‘Great War’ remained in use after the conflict was over, the moral connotations and implications that it had been ‘a war to end all wars’ fell away as the prospect grew in the 1930s of a second world war." 
+        }
+    ],
+    
+    "cardDetails": [
+        {
+            "title": "Life during war",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet.",
+            "link": "./views/lifeduringwar.html"
+        },
+        {
+            "title": "Weapons of war",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet.",
+            "link": "./views/weaponsofwar.html"
+        },
+        {
+            "title": "War Heroes",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet.",
+            "link": "./views/warheroes.html"
+        }
+    ]
+}
+

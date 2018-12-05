@@ -6,43 +6,66 @@
 
     </head>
     <div id="cont"></div>
-
-    <div class="jumbotron">
-        <div class="jumbotron__title">Weapons of War</div>
-        <div class="jumbotron__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lacinia felis et erat vulputate congue. Etiam sed est viverra, accumsan.
-        </div>
-    </div>
     
-    <div class="card">
-        <div class="card__image"></div>
-        <div class="card__title"></div>
-        <div class="card__text"></div>
-        <button type="button">Explore</button>
-    </div>
     
 </body>
 
 <script>
+// auto set browser to top of page
+$('html,body').scrollTop(0);
 
 // load wepons json
-contentLoader.loadJson('wepons.json', function(err, jsonData) {
+contentLoader.loadJson('weaponsofwar.json', function(err, jsonData) {
     if (err) { throw err; }    
     
-    console.log('Data Guns', jsonData['guns'])
-    var wepons = jsonData['guns'];    
-
-    console.log(wepons[1].name);
+    
+    var jumboData = jsonData['jumboTitle'];
+    var cardData = jsonData['cards'];    
+    
+    console.log('Data Guns',jsonData['jumboTitle']);
+    console.log(cardData[1].title);
     // And then create our markup: Load json here this should be your json file
     // loop this to catch all
     // store json in a thing like person
     //https://wesbos.com/template-strings-html/   <<shows loops
     
+    
 const markup = `
-<ul class="guns">
-${wepons.map(gun => `<li>${gun.name} is ${gun.age * 7}</li>`)}
-    </ul>
+<div class="jumbotron">              
+            <div class="jumbotron__textcontainer">
+                <div class="jumbotron__title">
+                    <h1>${jsonData['jumboTitle']}</h1>
+                </div>
 
-<div class="test">test</div>
+                <div class="jumbotron__text">
+                    <p>${jsonData['jumboBody']}</p>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="container">
+
+${cardData.map(data => 
+               
+               `<div class="card col-t-6 col-12 ">
+                <div class="card__image-holder">                
+                    <img src="${data.image}" class="card__image">
+                </div>
+                <div class="card__text-holder">
+                    <div class="card__title"><h3>${data.title}</h3></div>
+                    <div class="card__text"><p>${data.body}</p>
+                    </div>
+                    <div class="card__button-holder">
+                        <input type="button" class="card__button" value="Explore" onclick="pageUpdater.getPage('${data.link}')">
+                    </div>
+                </div>    
+            </div>  `
+              
+            ).join('')}
+
+        </section>
+
 `;
 
     document.getElementById('cont').innerHTML = markup;

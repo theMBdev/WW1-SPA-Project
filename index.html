@@ -1,39 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-          <link rel="stylesheet" href="style.css" type="text/css">
         <meta charset="UTF-8">
-        <title>JSON Tester</title>
-        <style>
-
-        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>title</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
     </head>
-
-
-
-    
-    
     <body>
-        <h1>Title</h1>
 
-        <div class="header">
-            <div classs="nav">
-                <ul>
-                    <li><a href="#" onclick="pageUpdater.getPage('home.html')">Home</a></li>
-                    <li><a href="#" onclick="pageUpdater.getPage('./views/lifeduringwar.html')">Life during war</a></li>
-                    <li><a href="#" onclick="pageUpdater.getPage('./views/weaponsofwar.html')">Weapons of war</a></li>
-                    <li><a href="#" onclick="pageUpdater.getPage('./views/warheroes.html')">War Heroes</a></li>   
-                    <li><a href="#" onclick="pageUpdater.getPage('./pagewithslide.html')">Page with Slide</a></li>   
-                </ul>
-            </div>
-        </div>                
+        <header class="header">
+            <a href="/" class="logo">WW1</a>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <ul class="menu">
+                <li><a href="#" onclick="pageUpdater.getPage('home.html')">HOME</a></li>
+                <li><a href="#" onclick="pageUpdater.getPage('./views/lifeduringwar.html')">LIFE DURING WAR</a></li>
+                <li><a href="#" onclick="pageUpdater.getPage('./views/weaponsofwar.html')">WEAPONS OF WAR</a></li>
+                <li><a href="#" onclick="pageUpdater.getPage('./views/warheroes.html')">WAR HEROES</a></li>
+            </ul>
+        </header>        
+           
 
         <div class="viewer" id="viewer">
 
         </div>
 
         <header></header>
-        <section></section>
+       
 
         <div id="app"></div>
 
@@ -52,11 +45,11 @@
         <script src="pageUpdater.js"></script>
         <script src="slideManager.js"></script>
 
-                        
-        
+
+
         <script>
 // load home page
-pageUpdater.getPage('home.html');
+//pageUpdater.getPage('home.html');
         </script>
 
     </body>
