@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>title</title>
         <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        </script>
     </head>
     <body>
 
@@ -13,30 +15,27 @@
             <input class="menu-btn" type="checkbox" id="menu-btn" />
             <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
             <ul class="menu">
-                <li><a href="#" onclick="pageUpdater.getPage('home.html')">HOME</a></li>
+                <li><a href="#" onclick="pageUpdater.getPage('./views/home.html')">HOME</a></li>
                 <li><a href="#" onclick="pageUpdater.getPage('./views/lifeduringwar.html')">LIFE DURING WAR</a></li>
                 <li><a href="#" onclick="pageUpdater.getPage('./views/weaponsofwar.html')">WEAPONS OF WAR</a></li>
                 <li><a href="#" onclick="pageUpdater.getPage('./views/warheroes.html')">WAR HEROES</a></li>
+                <li><a href="#" onclick="pageUpdater.getPage('./pagewithslide.html')">PWS</a></li>
             </ul>
         </header>        
-           
+
 
         <div class="viewer" id="viewer">
 
         </div>
 
         <header></header>
-       
+
 
         <div id="app"></div>
 
         <div id="elem"></div>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
 
-
-
-        </script>
 
         <!--        <script src="test.js"></script>-->
         <!--        <script src="testingPattern.js"></script>-->

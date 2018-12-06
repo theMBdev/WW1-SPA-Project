@@ -1,0 +1,226 @@
+<body>
+
+    <div id="cont"></div>    
+
+</body>
+
+<script>
+
+
+//load slide   // LOAD ORDER 2
+function loadJsonFunc() {
+    console.log('Loading slide json 3');
+
+    contentLoader.loadJson('slidedata.json', function(err, jsonData) {
+        if (err) { throw err; }    
+
+        //        console.log('Data slide', jsonData['slideshow1'])
+        var slide = jsonData['slideshow1'];    
+        //
+        //        console.log(slide[1].title);
+        //        console.log(slide[0].body);
+        //
+        //        console.log(slide[2].title);
+        //        console.log(slide[1].body);
+
+        const markup = `
+
+<div class="slideshow-container">
+
+${slide.map(slideData =>
+
+            `<div class="mySlides fade">              
+<div class="slide__title">
+<h3>${slideData.title}</h3>
+    </div>
+
+<div class="mySlides__text">
+<p>${slideData.body}</p>
+    </div>
+
+    </div>`
+           ).join("")}
+
+<a class="prev" id="prev"> &#10094;</a>
+<a class="next" id="plus"> &#10095;</a>
+
+    </div>
+<br>
+
+<div style="text-align:center">
+<span class="dot" id="dot1"></span> 
+<span class="dot" id="dot2"></span> 
+<span class="dot" id="dot3"></span> 
+<span class="dot" id="dot4"></span> 
+
+    </div>
+
+`;
+
+        // this may not work use query selecter at bottom
+        document.getElementById('slider').innerHTML = markup;
+    });
+
+
+    // LOAD ORDER 3
+    // 0.5 sec time out to make sure javascript loads last
+        setTimeout(function(){ 
+
+                console.log('Loading slide javascript 4');
+
+                var slideIndex = 1;
+                // Start by calling main slide function
+                showSlides(slideIndex);
+
+                // new addEventListener replaces inline onclick()
+                document.getElementById("prev").addEventListener("click", arrowControler, false);
+                document.getElementById("prev").myParam = -1;
+
+                document.getElementById("plus").addEventListener("click", arrowControler, false);
+                document.getElementById("plus").myParam = 1;
+
+                document.getElementById("dot1").addEventListener("click", dotControler, false);
+                document.getElementById("dot1").myParam = 1;
+
+                document.getElementById("dot2").addEventListener("click", dotControler, false);
+                document.getElementById("dot2").myParam = 2;
+
+                document.getElementById("dot3").addEventListener("click", dotControler, false);
+                document.getElementById("dot3").myParam = 3;
+
+                document.getElementById("dot4").addEventListener("click", dotControler, false);
+                document.getElementById("dot4").myParam = 4;
+
+
+                function arrowControler(evt) 
+                {
+                    showSlides(slideIndex += evt.target.myParam);	
+                }
+
+                function dotControler(evt) 
+                {
+                    currentSlide(evt.target.myParam);	
+                }
+
+                // functions for slide
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                    //myMove(slideIndex);   
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                    //myMove(slideIndex);    
+                }
+
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+
+                    // go back to slide one
+                    if (n > slides.length) {slideIndex = 1} 
+                    // go to last slide
+                    if (n < 1) {slideIndex = slides.length}
+
+                    // hide all slides
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                    }
+
+                    // 
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace("active", "");
+                    }
+
+                    // show first slide
+                    slides[slideIndex - 1].style.display = "block"; 
+                    // darken first dot
+                    dots[slideIndex - 1].className += " active";
+                }   
+          
+        }, 500);
+    }
+
+
+
+
+
+// load home page json data        // LOAD ORDER 1
+contentLoader.loadJson('home.json', function(err, jsonData) {
+    console.log('Loading main page json 1')
+
+    if (err) { throw err; }    
+
+    var jumboData = jsonData['jumboTitle'];
+    var sectionData = jsonData['sections'];
+    var cardData = jsonData['cardDetails'];    
+
+    //    console.log('Data home',jsonData['jumboTitle']);
+    //    console.log('Data home',sectionData[1].title);
+    //    console.log(cardData[1].title);
+
+    const markup = `
+<div class="parallax"></div>
+<div class="jumbotron--homepage">            
+<div class="jumbotron__textcontainer">
+<div class="jumbotron__title">
+<h1>${jsonData['jumboTitle']}</h1>
+    </div>
+
+<div class="jumbotron__text">
+<p>${jsonData['jumboBody']}</p>
+    </div>
+    </div>
+    </div>
+
+<section class>
+
+
+
+<section>
+<div class="banner"><h3>${sectionData[0].title}</h3></div>
+
+<div id="slider" class="slide">
+
+    </div>
+    </section>
+
+<section>
+<div class="banner-bottom"><h3>${sectionData[1].title}</h3></div>
+<div class="static-slide">                
+<div class="static-slide__text"><p>${sectionData[1].body}</p></div>                
+    </div>
+<div class="banner-bottom--left"><img src="images/cropped-WW1-Horse-icon--big.jpg" class="banner-bottom-left-image"></div>
+    </section>
+
+<section>
+
+${cardData.map(
+    data => 
+    `
+<div class="link-card spec-co-4">
+<div class="link-card__title"><h3>${data.title}</h3></div>
+<div class="link-card__text"><p>${data.body}</p></div>
+<input type="button" class="button" onclick="pageUpdater.getPage('${data.link}')" value="Explore">
+    </div>
+`
+
+).join('') }</section>
+
+    </section>
+
+`;
+
+    document.getElementById('cont').innerHTML = markup;   
+
+    //not loading last?
+    $(document).ready(function() {
+        console.log('call loadJsonFunc 2')
+        loadJsonFunc();
+    });
+});
+
+
+
+</script>
