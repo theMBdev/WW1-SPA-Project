@@ -72,6 +72,94 @@ ${slide.map(slideData =>
     // 0.5 sec time out to make sure javascript loads last
     setTimeout(function(){ 
 
+
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("year");
+        output.innerHTML = slider.value;
+
+        slider.oninput = function() {    
+
+            if (this.value == 1) {
+                output.innerHTML = 1914;
+            } else if (this.value == 2) {
+                output.innerHTML = 1915;
+            } else if (this.value == 3) {
+                output.innerHTML = 1916;
+            } else if (this.value == 4) {
+                output.innerHTML = 1917;
+            } else if (this.value == 5) {
+                output.innerHTML = 1918;
+            }
+
+            var year1914 = document.getElementsByClassName('y1914');
+            var year1915 = document.getElementsByClassName('y1915');
+            var year1916 = document.getElementsByClassName('y1916');
+            var year1917 = document.getElementsByClassName('y1917');
+            var year1918 = document.getElementsByClassName('y1918');
+
+            function loopYear(year, display) {
+                for (var i=0; i < year.length; i++) {
+                    year[i].style.display = display;
+                }
+            }
+
+            if (this.value == 1) {  
+                console.log("SLIDER ON !")
+                loopYear(year1914, "block")
+                loopYear(year1915, "none")
+                loopYear(year1916, "none")
+                loopYear(year1917, "none")
+                loopYear(year1918, "none")
+                document.getElementById('russia').style.display = "block";
+
+            } else if (this.value == 2) {  
+
+                loopYear(year1914, "block")
+                loopYear(year1915, "block")
+                loopYear(year1916, "none")
+                loopYear(year1917, "none")
+                loopYear(year1918, "none")
+
+                document.getElementById('russia').style.display = "block"; 
+
+
+
+            } else if (this.value == 3) {
+                console.log("SLIDER ON 3")
+                loopYear(year1914, "block")
+                loopYear(year1915, "block")
+                loopYear(year1916, "block")
+                loopYear(year1917, "none")
+                loopYear(year1918, "none")
+
+                document.getElementById('russia').style.display = "block"; 
+
+
+            } else if (this.value == 4) {
+
+                loopYear(year1914, "block")
+                loopYear(year1915, "block")
+                loopYear(year1916, "block")
+                loopYear(year1917, "block")
+                loopYear(year1918, "none")
+
+                document.getElementById('russia').style.display = "none";    
+
+            } else if (this.value == 5) { 
+                loopYear(year1914, "block")
+                loopYear(year1915, "block")
+                loopYear(year1916, "block")
+                loopYear(year1917, "block")
+                loopYear(year1918, "block")
+
+                document.getElementById('russia').style.display = "none";  
+            }
+        }
+
+
+
+
+
         // animate number
         function myMove(slideNum) {
             var elem = document.getElementById("currentNumberAni");   
@@ -105,7 +193,7 @@ ${slide.map(slideData =>
                     $( "#currentNumberAni" ).fadeOut( "medium" );
                     $( "#incomingNumberAni" ).fadeIn( "medium" );
                 }   
-                
+
             }
         }
 
@@ -138,20 +226,20 @@ ${slide.map(slideData =>
 
         // functions for slide
         function slideButtonsClick(evt) { 
-            
+
             slideManager.plusSlides(evt.target.myParam);   
-            
+
             slideIndex = slideIndex + evt.target.myParam;
-            
+
             if (slideIndex == 5) {
                 slideIndex = 1;
             } 
             if (slideIndex == 0) {
                 slideIndex = 4;
             }
-            
+
             myMove(slideIndex);
-            
+
             console.log(slideIndex);
         }    
 
@@ -217,7 +305,10 @@ contentLoader.loadJson('home.json', function(err, jsonData) {
 <div class="banner-bottom--left"><img src="images/cropped-WW1-Horse-icon--big.jpg" class="banner-bottom-left-image"></div>
     </section>
 
-<section>
+<section class="link-cards-section">
+
+<div class="link-cards-background">
+
 
 ${cardData.map(
     data => 
@@ -231,6 +322,192 @@ ${cardData.map(
 
 ).join('') }</section>
 
+    </div>
+
+
+
+
+
+    </section>
+
+<section>
+
+<div class="slidecontainer">
+<input type="range" min="1" max="5" value="1" class="slider" id="myRange">
+<p class="center">Year: <span id="year"></span></p>
+<div class="center">
+<span>1914 </span><span class="colorBoxYear boxColor1"></span>
+<span>1915 </span><span class="colorBoxYear boxColor2"></span>
+<span>1916 </span><span class="colorBoxYear boxColor3" ></span>
+<span>1917 </span><span class="colorBoxYear boxColor4"></span>
+<span>1918 </span><span class="colorBoxYear boxColor5"></span>
+    </div> 
+    </div>
+
+
+<div class="flex-container">            
+<div class="flexbox-1">
+
+<div class="item1">
+<p>ALLIES</p>
+<div class="text-holder y1914" id="france">
+<span class="text-holder__text">France <img src="flags/France-3.png" class="text-holder__img"></span>
+    </div>
+<div class="text-holder y1914" id="britian">
+<span class="text-holder__text">British Empire <img src="flags/uk.png" class="text-holder__img"></span>
+    </div>
+<div class="text-holder y1914" id="russia">
+<span class="text-holder__text">Russia <img src="flags/Russia.png" class="text-holder__img"></span>
+    </div>
+<div class="text-holder y1914" id="serbia">
+<span class="text-holder__text">Serbia <img src="flags/ser.png" class="text-holder__img"></span>
+    </div>
+<div class="text-holder y1914" id="belgium">
+<span class="text-holder__text">Belgium <img src="flags/Belgium-3.png" class="text-holder__img"></span>
+    </div>
+<div class="text-holder y1914" id="montenegro">
+<span class="text-holder__text">Montenegro <img src="flags/mont.png" class="text-holder__img"></span>
+    </div>
+<div class="text-holder y1914" id="japan">
+<span class="text-holder__text">Japan <img src="flags/Japan.png" class="text-holder__img"></span>
+    </div>
+<div class="text-holder y1915" id="italy">
+<span class="text-holder__text">Italy  <img src="flags/Italy.png" class="text-holder__img"></span>
+    </div>                    
+<div class="text-holder y1916" id="romania">
+<span class="text-holder__text">Romania <img src="flags/romania.png" class="text-holder__img"></span>
+    </div>
+<div class="text-holder y1916" id="portugal">
+<span class="text-holder__text">Portugal <img src="flags/Portugal.png" class="text-holder__img"></span>
+    </div>
+<div class="text-holder y1916" id="hejaz">
+<span class="text-holder__text">Hejaz<img src="flags/hejaz.png" class="text-holder__img"></span>
+    </div>
+<div class="text-holder y1917" id="china">
+<span class="text-holder__text">China<img src="flags/chinaold.png" class="text-holder__img"></span>
+    </div>
+<div class="text-holder y1917" id="greece">
+<span class="text-holder__text">Greece  <img src="flags/Greece.png" class="text-holder__img"></span>
+    </div>
+<div class="text-holder y1917" id="siam">
+<span class="text-holder__text">Siam<img src="flags/thailand.png" class="text-holder__img"></span>
+    </div>
+<div class="text-holder y1917" id="usa">
+<span class="text-holder__text">United States<img src="flags/usa.png" class="text-holder__img"></span>
+    </div>
+
+    </div>
+
+<div class="item2">
+<p>ENEMY</p>
+
+<div class="text-holder y1914" id="germany">
+<span class="text-holder__text">German Empire <img src="flags/geremp.png" class="text-holder__img"></span>
+    </div>
+<div class="text-holder y1914" id="aus-hun">
+<span class="text-holder__text">Austria-Hungary<img src="flags/austr.png" class="text-holder__img"></span>
+    </div>
+<div class="text-holder y1914" id="ottoman">
+<span class="text-holder__text">Ottoman Empire <img src="flags/turkey.png" class="text-holder__img"></span>
+    </div>
+<div class="text-holder y1915" id="bulgaria">
+<span class="text-holder__text">Bulgaria<img src="flags/bulgaria.png" class="text-holder__img"></span>
+    </div>
+
+    </div>
+
+    </div>
+
+<div class="nested-flex">     
+
+<div class="flexbox-2">
+<p>SIGNIFICANT BATTLES</p>
+
+<div class="text-holder y1914">
+<span class="text-holder__text">First Battle of the Marne</span>
+    </div>
+<div class="text-holder y1915">
+<span class="text-holder__text">Gallipoli</span>
+    </div>
+<div class="text-holder y1916">
+<span class="text-holder__text">Battle of Verdun</span>
+    </div>
+<div class="text-holder y1916">
+<span class="text-holder__text">Battle of the Somme</span>
+    </div>
+<div class="text-holder y1916">
+<span class="text-holder__text">Brusilov Offensive</span>
+    </div>
+<div class="text-holder y1917">
+<span class="text-holder__text">Third Ypres Campaign</span>
+    </div>
+<div class="text-holder y1918">
+<span class="text-holder__text">Spring Offensives</span>
+    </div>
+<div class="text-holder y1918">
+<span class="text-holder__text">Battle of Amiens</span>
+    </div>
+<div class="text-holder y1918">
+<span class="text-holder__text">Battle of Megiddo</span>
+    </div>
+
+    </div>
+
+<div class="flexbox-2">
+<p>EVENTS</p>
+
+<div class="text-holder y1914">
+<span class="text-holder__text">Archduke Assassination</span>
+    </div>
+<div class="text-holder y1914">
+<span class="text-holder__text">Russia Mobilizes</span>
+    </div>
+<div class="text-holder y1914">
+<span class="text-holder__text">World War I Begins</span>
+    </div>
+<div class="text-holder y1915">
+<span class="text-holder__text">Germans Fire</span>
+    </div>
+<div class="text-holder y1915">
+<span class="text-holder__text">Lusitania Sinks</span>
+    </div>
+<div class="text-holder y1916">
+<span class="text-holder__text">First Tanks</span>
+    </div>
+<div class="text-holder y1917">
+<span class="text-holder__text">Zimmerman Telegram</span>
+    </div>
+<div class="text-holder y1917">
+<span class="text-holder__text">Wilson for War</span>
+    </div>
+<div class="text-holder y1917">
+<span class="text-holder__text">U.S. Enters War</span>
+    </div>
+<div class="text-holder y1917">
+<span class="text-holder__text">Selective Service Act</span>
+    </div>
+<div class="text-holder y1918">
+<span class="text-holder__text">Germany and Russia Peace</span>
+    </div>
+<div class="text-holder y1918">
+<span class="text-holder__text">Battle of Cantigny</span>
+    </div>
+<div class="text-holder y1918">
+<span class="text-holder__text">Chateau-Thierry</span>
+    </div>
+<div class="text-holder y1918">
+<span class="text-holder__text">Selective Service Act</span>
+    </div>
+<div class="text-holder y1918">
+<span class="text-holder__text">Armistice Day</span>
+    </div>
+
+    </div>
+
+    </div>
+
+    </div>
+
     </section>
 
 `;
@@ -243,6 +520,7 @@ ${cardData.map(
         loadJsonFunc();
     });
 });
+
 
 
 

@@ -51,7 +51,3 @@ var slideManager = (function(){
 
 
 })();
-
-
-
-
