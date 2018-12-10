@@ -39,7 +39,7 @@ var contentLoader = (function() {
     }   
 
     return {
-        loadJson : loadJson,
+        loadJson : loadJson
 //        getString : getString
     } 
 })();

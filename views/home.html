@@ -52,8 +52,14 @@ ${slide.map(slideData =>
 <span class="dot" id="dot2"></span> 
 <span class="dot" id="dot3"></span> 
 <span class="dot" id="dot4"></span> 
-
     </div>
+
+<div id ="numberAniContainer">
+<div id ="currentNumberAni">1</div>
+<div id ="incomingNumberAni">2</div>
+    </div>
+
+
 
 `;
 
@@ -64,83 +70,100 @@ ${slide.map(slideData =>
 
     // LOAD ORDER 3
     // 0.5 sec time out to make sure javascript loads last
-        setTimeout(function(){ 
+    setTimeout(function(){ 
 
-                console.log('Loading slide javascript 4');
+        // animate number
+        function myMove(slideNum) {
+            var elem = document.getElementById("currentNumberAni");   
+            var elem2 = document.getElementById("incomingNumberAni");   
+            var pos = 50;
+            var pos2 = -20;
+            var id = setInterval(frame, 10);
 
-                var slideIndex = 1;
-                // Start by calling main slide function
-                showSlides(slideIndex);
+            //if(pos == 50){
+            console.log('click');
+            function frame() {
+                if (pos >= 120) {
+                    clearInterval(id);           
 
-                // new addEventListener replaces inline onclick()
-                document.getElementById("prev").addEventListener("click", arrowControler, false);
-                document.getElementById("prev").myParam = -1;
+                    $( "#currentNumberAni" ).show();
+                    $( "#incomingNumberAni" ).hide();
 
-                document.getElementById("plus").addEventListener("click", arrowControler, false);
-                document.getElementById("plus").myParam = 1;
+                    elem2.style.right = -20 + 'px';   
 
-                document.getElementById("dot1").addEventListener("click", dotControler, false);
-                document.getElementById("dot1").myParam = 1;
+                    elem.style.right = 50 + 'px';              
+                    elem.innerHTML = slideNum; // number shown
 
-                document.getElementById("dot2").addEventListener("click", dotControler, false);
-                document.getElementById("dot2").myParam = 2;
+                } else {            
+                    pos+=1 ;    
+                    pos2+=1 ;  
+                    elem.style.right = pos + 'px'; 
+                    elem2.style.right = pos2 + 'px'; 
 
-                document.getElementById("dot3").addEventListener("click", dotControler, false);
-                document.getElementById("dot3").myParam = 3;
+                    elem2.innerHTML = slideNum; // number shown
 
-                document.getElementById("dot4").addEventListener("click", dotControler, false);
-                document.getElementById("dot4").myParam = 4;
-
-
-                function arrowControler(evt) 
-                {
-                    showSlides(slideIndex += evt.target.myParam);	
-                }
-
-                function dotControler(evt) 
-                {
-                    currentSlide(evt.target.myParam);	
-                }
-
-                // functions for slide
-                function plusSlides(n) {
-                    showSlides(slideIndex += n);
-                    //myMove(slideIndex);   
-                }
-
-                function currentSlide(n) {
-                    showSlides(slideIndex = n);
-                    //myMove(slideIndex);    
-                }
-
-                function showSlides(n) {
-                    var i;
-                    var slides = document.getElementsByClassName("mySlides");
-                    var dots = document.getElementsByClassName("dot");
-
-                    // go back to slide one
-                    if (n > slides.length) {slideIndex = 1} 
-                    // go to last slide
-                    if (n < 1) {slideIndex = slides.length}
-
-                    // hide all slides
-                    for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";  
-                    }
-
-                    // 
-                    for (i = 0; i < dots.length; i++) {
-                        dots[i].className = dots[i].className.replace("active", "");
-                    }
-
-                    // show first slide
-                    slides[slideIndex - 1].style.display = "block"; 
-                    // darken first dot
-                    dots[slideIndex - 1].className += " active";
+                    $( "#currentNumberAni" ).fadeOut( "medium" );
+                    $( "#incomingNumberAni" ).fadeIn( "medium" );
                 }   
-          
-        }, 500);
-    }
+                
+            }
+        }
+
+        console.log('Loading slide javascript 4');
+
+        var slideIndex = 1;
+        // Start by calling main slide function
+
+        slideManager.showSlides(slideIndex);
+
+        // new addEventListener replaces inline onclick()
+        document.getElementById("prev").addEventListener("click", slideButtonsClick, false);
+        document.getElementById("prev").myParam = -1;
+
+        document.getElementById("plus").addEventListener("click", slideButtonsClick, false);
+        document.getElementById("plus").myParam = 1;
+
+        document.getElementById("dot1").addEventListener("click", dotClicked, false);
+        document.getElementById("dot1").myParam = 1;
+
+        document.getElementById("dot2").addEventListener("click", dotClicked, false);
+        document.getElementById("dot2").myParam = 2;
+
+        document.getElementById("dot3").addEventListener("click", dotClicked, false);
+        document.getElementById("dot3").myParam = 3;
+
+        document.getElementById("dot4").addEventListener("click", dotClicked, false);
+        document.getElementById("dot4").myParam = 4;
+
+
+        // functions for slide
+        function slideButtonsClick(evt) { 
+            
+            slideManager.plusSlides(evt.target.myParam);   
+            
+            slideIndex = slideIndex + evt.target.myParam;
+            
+            if (slideIndex == 5) {
+                slideIndex = 1;
+            } 
+            if (slideIndex == 0) {
+                slideIndex = 4;
+            }
+            
+            myMove(slideIndex);
+            
+            console.log(slideIndex);
+        }    
+
+        function dotClicked(evt) {            
+            slideManager.currentSlide(evt.target.myParam);            
+            myMove(evt.target.myParam);
+            slideIndex = evt.target.myParam;
+            console.log(evt.target.myParam);
+        }    
+
+    }, 500);
+}
 
 
 

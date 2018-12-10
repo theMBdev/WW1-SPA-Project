@@ -16,8 +16,9 @@ a {
     position: fixed;
     width: 100%;
     z-index: 3;
-    background-color: rgba(100,37,23,0.5);
+    background-color: rgba(0,0,0,0.4);
     border-bottom: 1px solid white;    
+    z-index: 12;
 }
 
 .header ul {
@@ -40,7 +41,7 @@ a {
 
 .header li a:hover,
 .header .menu-btn:hover {
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(0,0,0,0.3);
 }
 
 .header .logo {
@@ -58,6 +59,7 @@ a {
     clear: both;
     max-height: 0;
     transition: max-height .2s ease-out;
+    z-index: 12;
 }
 
 /* menu icon */
@@ -194,7 +196,7 @@ body {
     display: none;
 }
 
-/*wepons of war*/
+/*weapons of war mobile*/
 .card {
     background-color: aquamarine;
     height: 530px;
@@ -263,7 +265,7 @@ body {
 }
 
 .button:hover {  
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(0,0,0,0.2);
 }
 
 /*home page mobile*/
@@ -281,7 +283,8 @@ body {
 
 .slide {
     height: 450px;
-    background-color: lemonchiffon;
+    background-color: white;
+    z-index: 10;
 }
 
 .slide__title h3 {    
@@ -314,6 +317,13 @@ body {
     text-align: left;  
     padding: 10px;
 }
+
+    .banner-bottom-left-image {
+        width: 100%;
+        height: 660px;            
+        object-fit: cover;      
+        display: none;
+    }
 
 
 .link-card {
@@ -448,12 +458,16 @@ body {
         display: none;
     }
 
+    /*    weapons of war desktop*/
     .card {
+
         background-color: white;
         height: 330px;
         margin: 30px auto;
         padding: 0px;
         width: 70%;
+        min-width: 900px;
+        max-width: 1000px;
         border-radius: 5px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.11);
     }
@@ -469,7 +483,7 @@ body {
     .card__image {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: f;
         border-radius: 5px 0px 0px 5px;
     }
 
@@ -537,11 +551,12 @@ body {
         background-color: white;
         border-radius: 2px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.11);
+        z-index: 10;
     }
 
     .slide__title h3 {    
         text-align: center;  
-/*        padding: 30px 0px 0px;*/
+        /*        padding: 30px 0px 0px;*/
     }
 
     .slide__text {    
@@ -588,7 +603,7 @@ body {
         background-color: white;
         border-radius: 2px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.11);
-        z-index: 2;
+        z-index: 10;
     }
 
     .static-slide__text {    
@@ -608,7 +623,8 @@ body {
     .banner-bottom-left-image {
         width: 100%;
         height: 660px;            
-        object-fit: cover;        
+        object-fit: cover;      
+        display: block;
     }
 
     .spec-co-4 {
@@ -634,7 +650,7 @@ body {
     }
 
     .link-card__text {
-        padding-top: 15px;
+        padding-top: 0px;
         width: 300px;
         margin: auto;
         text-align: center;
@@ -700,7 +716,7 @@ body {
 /*Slide Stuff*/
 /*.mySlides {display: none}    << original */
 .mySlides {display: none}
-img {vertical-align: middle;}
+
 
 /* Slideshow container */
 .slideshow-container {    
@@ -708,9 +724,9 @@ img {vertical-align: middle;}
     width: 700px;
     height: 430px; /*Reomove for dynamic height*/
     position: relative;
-    margin: auto;
-    background-color: tan;     
+    margin: auto;   
     padding: 30px;  
+    z-index: 10;
 }
 
 .mySlides__title {
@@ -719,7 +735,7 @@ img {vertical-align: middle;}
 
 .mySlides__text {
     text-align: left;  
-    
+
 }
 
 /* Next & previous buttons */
@@ -789,7 +805,7 @@ img {vertical-align: middle;}
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
-    z-index: 1000;
+    z-index: 11;
 }
 
 .active, .dot:hover {
@@ -806,21 +822,26 @@ img {vertical-align: middle;}
 
 #numberAniContainer {                
     position: relative;                 
-    top: -190px;
-    float: right;               
+    top: -127px;
+    right: -140px;
+    float: right;  
+    z-index: 1;
+    color: rgba(157,143,143,0.7);
 }
 
 #currentNumberAni {  
     position: absolute;
     right: 50px;
-    font-size: 150px;
+    font-size: 250px;
+    z-index: -1;
 }
 
 #incomingNumberAni {     
     position: absolute;
     right: -20px;
-    font-size: 150px;
+    font-size: 250px;
     display: none;
+    z-index: -1;
 }
 
 
