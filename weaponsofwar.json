@@ -14,30 +14,12 @@
             "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lacinia felis et erat vulputate congue. Etiam sed est viverra, accumsan.",
             "image": "images/air.jpg",
             "link": "./views/airvehicles.html"
-        },
-        {
-            "title": "Sea Vehicles",
-            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lacinia felis et erat vulputate congue. Etiam sed est viverra, accumsan.",
-            "image": "images/sea.jpg",
-            "link": "./views/seavehicles.html"
-        },
+        },      
         {
             "title": "Infantry Weapons",
             "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lacinia felis et erat vulputate congue. Etiam sed est viverra, accumsan.",
             "image": "images/infintary.jpg" ,
             "link": "./views/infantryweapons.html"
-        },
-        {
-            "title": "Artillery",
-            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lacinia felis et erat vulputate congue. Etiam sed est viverra, accumsan.",
-            "image": "images/artillery.jpg" ,
-            "link": "./views/artillery.html"
-        },
-        {
-            "title": "Gas",
-            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lacinia felis et erat vulputate congue. Etiam sed est viverra, accumsan.",
-            "image": "images/gas.jpg"  ,
-            "link": "./views/gas.html"
-        }
+        }       
     ]
 }

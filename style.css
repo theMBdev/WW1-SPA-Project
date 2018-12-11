@@ -142,7 +142,14 @@ a {
     top: 0;
 }
 
+#home-cont {
+    height: -4500px;
+    background-color: black;
+}
 
+.homepage-container {
+
+}
 
 h1 {
     font-size: 2.5rem;
@@ -163,6 +170,13 @@ h3 {
     margin: 0px 0px 10px;
 }
 
+h4 {
+    font-size: 1.0rem;
+    font-weight: 600;
+    margin: 0px;
+    margin: 5px 0px 5px;
+}
+
 p {
     font-size: 1.0rem;
     margin: 0px;
@@ -173,7 +187,7 @@ body {
     padding: 0px;
     margin: 0px;
     font-family: 'Noto Sans SC', sans-serif;
-    height: 2000px;
+    height: -2400px;
 }
 
 /* For mobile phones: */
@@ -289,7 +303,7 @@ body {
     background-image: url("images/Chateauwood.jpg");
 
     /* Set a specific height */
-    height: 2400px; 
+    min-height: 2400px; 
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -406,9 +420,7 @@ body {
 
 /*slider home page mobile */
 
-.flex-container {
-    position: relative;
-    top: -2400px;
+.flex-container {   
     display: flex;
     flex-direction: column;
     align-items: stretch;               
@@ -492,12 +504,22 @@ body {
 
 
 /*  SLIDER */
-.slidecontainer {    
+.slideHolder {
+    background-color: rgba(0,0,0, 0.8);    
+    width: 100%;
+    height: 1200px;
     position: relative;
     top: -2400px;
+    z-index: 0;
+    padding-bottom: 20px;
+}
+
+
+.slidecontainer { 
     width: 90%;                
     margin: auto;
-    padding-top: 40px;    
+    padding-top: 40px;   
+    color: white;
 }
 
 .slider {
@@ -597,6 +619,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.home-footer {
+    height: 200px;
+    width: 100%;
+    background-color: black;
+    position: relative;
+    top: -2400px;    
 }
 
 
@@ -885,7 +915,6 @@ body {
     }
 
     /*home page desktop*/
-
     .parallax { 
         /* The image used */
         background-image: url("images/Chateauwood.jpg");
@@ -1018,7 +1047,7 @@ body {
 
     .link-cards-section {
         width: 100%;     
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.4);
         position: relative;
         top: -2400px;
         display: block;
@@ -1080,9 +1109,7 @@ body {
 
 
     /* slider on home page desktop */
-    .flex-container {
-        position: relative;
-        top: -2400px;
+    .flex-container {       
         display: flex;
         flex-direction: row;
         align-items: stretch;                    
@@ -1110,7 +1137,6 @@ body {
         flex-grow: 1;
         flex-shrink: 1;
         border-radius: 5px;
-
     }
 
     .flexbox-2 {
@@ -1163,9 +1189,11 @@ body {
 
     /*  SLIDER */
 
-    .slidecontainer {
-        position: relative;
-        top: -2400px;
+    .slideHolder {        
+        height: calc(50% - 10px);
+    }
+
+    .slidecontainer {     
         width: 70%;                
         margin: auto;   
     }
@@ -1262,6 +1290,14 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .home-footer {
+        height: 200px;
+        width: 100%;
+        background-color: black;
+        position: relative;
+        top: -2400px;
     }
 
     /*Slide Stuff*/
@@ -1393,6 +1429,9 @@ body {
         display: none;
         z-index: -1;
     }
+
+
+
 
 }
 

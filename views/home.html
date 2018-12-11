@@ -1,8 +1,5 @@
-<body>
 
-    <div id="cont"></div>    
-
-</body>
+<div id="home-cont"></div>   
 
 <script>
 
@@ -71,7 +68,6 @@ ${slide.map(slideData =>
     // LOAD ORDER 3
     // 0.5 sec time out to make sure javascript loads last
     setTimeout(function(){ 
-
 
         var slider = document.getElementById("myRange");
         var output = document.getElementById("year");
@@ -155,10 +151,6 @@ ${slide.map(slideData =>
                 document.getElementById('russia').style.display = "none";  
             }
         }
-
-
-
-
 
         // animate number
         function myMove(slideNum) {
@@ -255,8 +247,6 @@ ${slide.map(slideData =>
 
 
 
-
-
 // load home page json data        // LOAD ORDER 1
 contentLoader.loadJson('home.json', function(err, jsonData) {
     console.log('Loading main page json 1')
@@ -285,7 +275,7 @@ contentLoader.loadJson('home.json', function(err, jsonData) {
     </div>
     </div>
 
-<section class>
+<section class="homepage-container">
 
 
 
@@ -324,13 +314,9 @@ ${cardData.map(
 
     </div>
 
-
-
-
-
     </section>
 
-<section>
+<section class="slideHolder">
 
 <div class="slidecontainer">
 <input type="range" min="1" max="5" value="1" class="slider" id="myRange">
@@ -349,7 +335,7 @@ ${cardData.map(
 <div class="flexbox-1">
 
 <div class="item1">
-<p>ALLIES</p>
+<h4>ALLIES</h4>
 <div class="text-holder y1914" id="france">
 <span class="text-holder__text">France <img src="flags/France-3.png" class="text-holder__img"></span>
     </div>
@@ -399,7 +385,7 @@ ${cardData.map(
     </div>
 
 <div class="item2">
-<p>ENEMY</p>
+<h4>ENEMY</h4>
 
 <div class="text-holder y1914" id="germany">
 <span class="text-holder__text">German Empire <img src="flags/geremp.png" class="text-holder__img"></span>
@@ -421,7 +407,7 @@ ${cardData.map(
 <div class="nested-flex">     
 
 <div class="flexbox-2">
-<p>SIGNIFICANT BATTLES</p>
+<h4>SIGNIFICANT BATTLES</h4>
 
 <div class="text-holder y1914">
 <span class="text-holder__text">First Battle of the Marne</span>
@@ -454,7 +440,7 @@ ${cardData.map(
     </div>
 
 <div class="flexbox-2">
-<p>EVENTS</p>
+<h4>EVENTS</h4>
 
 <div class="text-holder y1914">
 <span class="text-holder__text">Archduke Assassination</span>
@@ -509,10 +495,13 @@ ${cardData.map(
     </div>
 
     </section>
+<footer class="home-footer">
+
+    </footer>
 
 `;
 
-    document.getElementById('cont').innerHTML = markup;   
+    document.getElementById('home-cont').innerHTML = markup;   
 
     //not loading last?
     $(document).ready(function() {
