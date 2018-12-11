@@ -2,6 +2,20 @@
     box-sizing: border-box;
 }
 
+/*colours */
+:root {
+    --darkest-brown: rgba(98,87,87,0); 
+    --lightest-brown: rgba(157,143,143,0); 
+    --darkest-grey: rgba(188,186,184,0); 
+    --lightest-grey: rgba(249,249,249,0); 
+    --almost-black: rgba(35,35,35,0);
+
+
+
+
+    /*    to call 
+    background-color: var(--darkest-brown); */
+}
 
 
 
@@ -197,11 +211,12 @@ body {
 }
 
 /*weapons of war mobile*/
-.card {
-    background-color: aquamarine;
+.card {    
     height: 530px;
     margin: 10px;
     padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2);
 }
 
 .card__image-holder {
@@ -268,21 +283,43 @@ body {
     background-color: rgba(0,0,0,0.2);
 }
 
+
+.parallax { 
+    /* The image used */
+    background-image: url("images/Chateauwood.jpg");
+
+    /* Set a specific height */
+    height: 2400px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;        
+}
+
+
 /*home page mobile*/
 .banner {
+    position: relative;
+    top: -2400px;
     height: 60px;
-    background-color: dimgray;    
+    background-color: #9D8F8F;    
 }
 
 .banner h3 {
     position: relative;
+    top: -2400px;
     top: 50%;
     transform: translateY(-50%);
     text-align: center;   
+    color: white;
 }
 
 .slide {
-    height: 450px;
+    position: relative;
+    top: -2400px;
+    height: auto;
     background-color: white;
     z-index: 10;
 }
@@ -297,8 +334,11 @@ body {
 }
 
 .banner-bottom {
+    position: relative;
+    top: -2400px;
     height: 60px;
-    background-color: dimgray;    
+    background-color: #9D8F8F;    
+    color: white;
 }
 
 .banner-bottom h3 {
@@ -309,13 +349,15 @@ body {
 }
 
 .static-slide {
-    height: 450px;
-    background-color: lemonchiffon;
+    position: relative;
+    top: -2400px;
+    height: auto;
+    background-color: white;
 }
 
 .static-slide__text {    
     text-align: left;  
-    padding: 10px;
+    padding: 30px;    
 }
 
 .banner-bottom-left-image {
@@ -327,10 +369,14 @@ body {
 
 
 .link-card {
+    position: relative;
+    top: -2400px;
     height: 300px;
-    background-color: cornflowerblue;
-    z-index: 15;
-    margin-bottom: 50px;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 10;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: white;
 }
 
 .link-card h3 {
@@ -361,6 +407,8 @@ body {
 /*slider home page mobile */
 
 .flex-container {
+    position: relative;
+    top: -2400px;
     display: flex;
     flex-direction: column;
     align-items: stretch;               
@@ -444,9 +492,12 @@ body {
 
 
 /*  SLIDER */
-.slidecontainer {
+.slidecontainer {    
+    position: relative;
+    top: -2400px;
     width: 90%;                
     margin: auto;
+    padding-top: 40px;    
 }
 
 .slider {
@@ -551,6 +602,147 @@ body {
 
 
 
+
+
+
+
+/*Slide Stuff mobile*/
+.mySlides {display: none}
+
+
+/* Slideshow container */
+.slideshow-container {    
+    max-width: 100%;
+    width: 100%;
+    height: 430px; /*Reomove for dynamic height*/
+    position: relative;
+    margin: auto;   
+    padding: 30px;  
+    z-index: 10;
+}
+
+.mySlides__title {
+
+}
+
+.mySlides__text {
+    text-align: left;  
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(157,143,143,0.4);
+}
+
+/* Position the "next button" to the left */
+.prev {
+    left: -15px;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* Position the "next button" to the right */
+.next {
+    right: -15px;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(98,87,87,0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    z-index: -3;
+}
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #BCBAB8;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    z-index: 11;
+}
+
+.active, .dot:hover {
+    background-color: #9D8F8F;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+#numberAniContainer {                
+    position: relative;                 
+    top: -230px;
+    right: -50px;
+    float: right;  
+    z-index: 1;
+    color: rgba(157,143,143,0.3);
+}
+
+#currentNumberAni {  
+    position: absolute;
+    right: 50px;
+    font-size: 250px;
+    z-index: -1;
+}
+
+#incomingNumberAni {     
+    position: absolute;
+    right: -20px;
+    font-size: 250px;
+    display: none;
+    z-index: -1;
+}
+
+
+
+
+
+
+
+
 @media only screen and (min-width: 685px) {
 
     /*    For tablet: */
@@ -626,13 +818,11 @@ body {
 
 
     .jumbotron {
-        height: 300px;
-        background-color: saddlebrown;             
+        height: 300px;                   
     }
 
     .jumbotron--homepage {
-        height: 300px;
-        background-color: blanchedalmond;
+        height: 300px;        
         z-index: 1;
         position: relative;
         top: -2400px;
@@ -831,18 +1021,21 @@ body {
         background-color: rgba(0, 0, 0, 0.3);
         position: relative;
         top: -2400px;
+        display: block;
     }
-    
+
     .link-cards-background {
-        
+        display: block;
         height: 300px;
         z-index: 1;
         width: 90%;
+        min-width: 70%;
         margin: auto;
-        
     }
-    
+
     .link-card {
+        position: relative;
+        top: 0px;
         height: 300px;
         background-color: rgba(0,0,0,0.0);        
         color: white;
@@ -883,332 +1076,324 @@ body {
         content: "";
         clear: both;
         display: table;
+    }    
+
+
+    /* slider on home page desktop */
+    .flex-container {
+        position: relative;
+        top: -2400px;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;                    
+        height: auto;
+        width: 70%;      
+        margin: auto;
+        border-radius: 5px;
     }
-    
-    
-    
-/* slider on home page desktop */
-.flex-container {
-    position: relative;
-    top: -2400px;
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;                    
-    height: auto;
-    width: 70%;
-    margin: auto;
-    border-radius: 5px;
-}
 
-.flex-container > div {
-    background-color: #9D8F8F;
-    color: black;               
-    margin: 0px 5px 0px 5px;
-    text-align: center;    
-    border-radius: 5px;
+    .flex-container > div {
+        background-color: #9D8F8F;
+        color: black;               
+        margin: 0px 5px 0px 5px;
+        text-align: center;    
+        border-radius: 5px;
+    }
 
-}
+    .nested-flex {
+        display: flex;
+        flex-grow: 1;
+    }
 
-.nested-flex {
-    display: flex;
-    flex-grow: 1;
-}
+    .flexbox-1 {
+        width: 350px;
+        flex-grow: 1;
+        flex-shrink: 1;
+        border-radius: 5px;
 
-.flexbox-1 {
-    width: 350px;
-    flex-grow: 1;
-    flex-shrink: 1;
-    border-radius: 5px;
+    }
 
-}
+    .flexbox-2 {
+        width: 150px;
+        flex-grow: 1;                                         
+    }
 
-.flexbox-2 {
-    width: 150px;
-    flex-grow: 1;                                         
-}
+    .item1 {
+        background-color: #9D8F8F;
+        border-right: solid 1px #BCBAB8;
+        height: 100%;
+        width: 50%;
+        float: left;
+        color: black;
+        border-radius: 5px 0px 0px 5px;
+    }
 
-.item1 {
-    background-color: #9D8F8F;
-    border-right: solid 1px #BCBAB8;
-    height: 100%;
-    width: 50%;
-    float: left;
-    color: black;
-    border-radius: 5px 0px 0px 5px;
-}
+    .item2 {
+        background-color: #9D8F8F;
+        height: 100%;
+        width: 50%;
+        float: left;
+        color: black;
+        border-radius: 0px 5px 5px 0px;
+    }
 
-.item2 {
-    background-color: #9D8F8F;
-    height: 100%;
-    width: 50%;
-    float: left;
-    color: black;
-    border-radius: 0px 5px 5px 0px;
-}
+    .text-holder {
+        margin: 5px auto;
+        width: 150px;
+        height: 25px;
+        background-color: #BCBAB8;
+        border-radius: 5px;
+        transition: 1000ms linear;
+    }                
 
-.text-holder {
-    margin: 5px auto;
-    width: 150px;
-    height: 25px;
-    background-color: #BCBAB8;
-    border-radius: 5px;
-    transition: 1000ms linear;
-}                
+    .text-holder__text { 
+        /*                font-size: calc(7px + 0.8vw);  */
+        font-size: 14px;
+        position: relative;
+        top: 3px;
+    }
 
-.text-holder__text { 
-    /*                font-size: calc(7px + 0.8vw);  */
-    font-size: 14px;
-    position: relative;
-    top: 3px;
-}
+    .text-holder__img { 
+        position: relative;
+        width: 25px;
+        left: -10px;
+        top: 3px;
+        float: right;
+    }
 
-.text-holder__img { 
-    position: relative;
-    width: 25px;
-    left: -10px;
-    top: 3px;
-    float: right;
-}
+    /*  SLIDER */
 
-/*  SLIDER */
+    .slidecontainer {
+        position: relative;
+        top: -2400px;
+        width: 70%;                
+        margin: auto;   
+    }
 
-.slidecontainer {
-    position: relative;
-    top: -2400px;
-    width: 70%;                
-    margin: auto;   
-}
+    .slider {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 10px;
+        border-radius: 5px;
+        background: #BCBAB8;
+        outline: none;
+        opacity: 0.7;
+    }
 
-.slider {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 10px;
-    border-radius: 5px;
-    background: #BCBAB8;
-    outline: none;
-    opacity: 0.7;
-}
+    .slider:hover {
+        opacity: 1;
+    }
 
-.slider:hover {
-    opacity: 1;
-}
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: #FFFF;
+        border: solid 1px #BCBAB8;
+        cursor: pointer;
+    }
 
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: #FFFF;
-    border: solid 1px #BCBAB8;
-    cursor: pointer;
-}
+    .slider::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: #4CAF50;
+        cursor: pointer;
+    }
 
-.slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: #4CAF50;
-    cursor: pointer;
-}
+    .y1914 {
+        display: block;                    
+    }
 
-.y1914 {
-    display: block;                    
-}
+    .y1915 {
+        display: none;
+        background-color: #d7b8a0;
+    }
 
-.y1915 {
-    display: none;
-    background-color: #d7b8a0;
-}
+    .y1916 {
+        display: none;
+        background-color: #bfa48e;
+    }
 
-.y1916 {
-    display: none;
-    background-color: #bfa48e;
-}
+    .y1917 {
+        display: none;
+        background-color: #a78f7c;
+    }     
 
-.y1917 {
-    display: none;
-    background-color: #a78f7c;
-}     
+    .y1918 {
+        display: none;
+        background-color: #8f7b6a;
+    }  
 
-.y1918 {
-    display: none;
-    background-color: #8f7b6a;
-}  
+    .colorBoxYear {
+        height: 20px;
+        width: 20px; 
+        margin: 0px 5px 0px 5px;
 
-.colorBoxYear {
-    height: 20px;
-    width: 20px; 
-    margin: 0px 5px 0px 5px;
+    }
 
-}
+    .boxColor1  {
+        background-color: #BCBAB8;                                    
+    }
 
-.boxColor1  {
-    background-color: #BCBAB8;                                    
-}
+    .boxColor2  {
+        background-color: #d7b8a0;                                    
+    }
 
-.boxColor2  {
-    background-color: #d7b8a0;                                    
-}
+    .boxColor3 {
+        background-color: #bfa48e;                                    
+    }
 
-.boxColor3 {
-    background-color: #bfa48e;                                    
-}
+    .boxColor4  {
+        background-color: #a78f7c;                                    
+    }
 
-.boxColor4  {
-    background-color: #a78f7c;                                    
-}
+    .boxColor5  {
+        background-color: #8f7b6a;                                    
+    }
 
-.boxColor5  {
-    background-color: #8f7b6a;                                    
-}
+    .center {
+        width: 100%;
+        height: 30px;                    
+        display: inline-block;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.center {
-    width: 100%;
-    height: 30px;                    
-    display: inline-block;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    /*Slide Stuff*/
+    .mySlides {display: none}
 
 
-}
+    /* Slideshow container */
+    .slideshow-container {    
+        max-width: 500px;
+        width: 700px;
+        height: 430px; /*Reomove for dynamic height*/
+        position: relative;
+        margin: auto;   
+        padding: 30px;  
+        z-index: 10;
+    }
+
+    .mySlides__title {
+
+    }
+
+    .mySlides__text {
+        text-align: left;  
+
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        background-color: rgba(157,143,143,0.4); 
+    }
+
+    /* Position the "next button" to the left */
+    .prev {
+        left: -30px;
+        border-radius: 3px 0 0 3px;
+    }
 
 
+    /* Position the "next button" to the right */
+    .next {
+        right: -30px;
+        border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+        background-color: rgba(98,87,87,0.8);
+    }
+
+    /* Caption text */
+    .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+        z-index: -3;
+    }
 
 
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
 
-/*Slide Stuff*/
-/*.mySlides {display: none}    << original */
-.mySlides {display: none}
+    /* The dots/bullets/indicators */
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #BCBAB8;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        z-index: 11;
+    }
 
+    .active, .dot:hover {
+        background-color: #9D8F8F;
+    }
 
-/* Slideshow container */
-.slideshow-container {    
-    max-width: 500px;
-    width: 700px;
-    height: 430px; /*Reomove for dynamic height*/
-    position: relative;
-    margin: auto;   
-    padding: 30px;  
-    z-index: 10;
-}
+    /* Fading animation */
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
 
-.mySlides__title {
+    #numberAniContainer {                
+        position: relative;                 
+        top: -127px;
+        right: -140px;
+        float: right;  
+        z-index: 1;
+        color: rgba(157,143,143,0.7);
+    }
 
-}
+    #currentNumberAni {  
+        position: absolute;
+        right: 50px;
+        font-size: 250px;
+        z-index: -1;
+    }
 
-.mySlides__text {
-    text-align: left;  
+    #incomingNumberAni {     
+        position: absolute;
+        right: -20px;
+        font-size: 250px;
+        display: none;
+        z-index: -1;
+    }
 
-}
-
-/* Next & previous buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    background-color: rgba(0,0,0,0.4); 
-}
-
-/* Position the "next button" to the left */
-.prev {
-    left: -50px;
-    border-radius: 3px 0 0 3px;
-}
-
-
-/* Position the "next button" to the right */
-.next {
-    right: -50px;
-    border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-    z-index: -3;
-}
-
-
-/* Number text (1/3 etc) */
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-    z-index: 11;
-}
-
-.active, .dot:hover {
-    background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-#numberAniContainer {                
-    position: relative;                 
-    top: -127px;
-    right: -140px;
-    float: right;  
-    z-index: 1;
-    color: rgba(157,143,143,0.7);
-}
-
-#currentNumberAni {  
-    position: absolute;
-    right: 50px;
-    font-size: 250px;
-    z-index: -1;
-}
-
-#incomingNumberAni {     
-    position: absolute;
-    right: -20px;
-    font-size: 250px;
-    display: none;
-    z-index: -1;
 }
 
 
@@ -1222,7 +1407,6 @@ body {
     to {opacity: 1}
 }
 
-/* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
     .prev, .next,.text {font-size: 11px}
 }
