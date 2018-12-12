@@ -26,7 +26,7 @@ function loadJsonFunc() {
 
 ${slide.map(slideData =>
 
-            `<div class="mySlides fade">              
+`<div class="mySlides fade">              
 <div class="slide__title">
 <h3>${slideData.title}</h3>
     </div>
@@ -66,13 +66,14 @@ ${slide.map(slideData =>
 
 
     // LOAD ORDER 3
-    // 0.5 sec time out to make sure javascript loads last
+    // 1 sec timer to make sure javascript loads last
     setTimeout(function(){ 
 
         var slider = document.getElementById("myRange");
         var output = document.getElementById("year");
         output.innerHTML = slider.value;
-
+        document.getElementById('year').innerHTML = "1914";
+        
         slider.oninput = function() {    
 
             if (this.value == 1) {
@@ -242,7 +243,7 @@ ${slide.map(slideData =>
             console.log(evt.target.myParam);
         }    
 
-    }, 500);
+    }, 1000);
 }
 
 
