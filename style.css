@@ -778,8 +778,9 @@ body {
 }
 
 .weaponsofwar-heading-container{    
-    max-width: 1380px;
+    max-width: 800px;
     margin: 100px auto 30px;
+    text-align: center;
 }
 
 .weapon-card--tank {

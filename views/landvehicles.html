@@ -9,27 +9,26 @@
 
 
 </body>
+
 <script>
-// auto set browser to top of page
-$('html,body').scrollTop(0);
+    // auto set browser to top of page
+    $('html,body').scrollTop(0);
 
-// load wepons json
-contentLoader.loadJson('weaponsofwar.json', function(err, jsonData) {
-    if (err) { throw err; }    
+    // load wepons json
+    contentLoader.loadJson('landvehicles.json', function(err, jsonData) {
+        if (err) { throw err; }    
 
+        var jumboData = jsonData['jumboTitle'];
+        var cardData = jsonData['pistols'];    
 
-    var jumboData = jsonData['jumboTitle'];
-    var cardData = jsonData['cards'];    
-
-    console.log('Data Guns',jsonData['jumboTitle']);
-    console.log(cardData[1].title);
-    // And then create our markup: Load json here this should be your json file
-    // loop this to catch all
-    // store json in a thing like person
-    //https://wesbos.com/template-strings-html/   <<shows loops
+        console.log('Data Guns',jsonData['homeTown']);
+        //console.log(cardData[1].name);
 
 
-    const markup = `
+        var tanks = jsonData['tanks']; 
+
+
+        const markup = `
 <div class="jumbotron">              
 <div class="jumbotron__textcontainer">
 <div class="jumbotron__title">
@@ -45,24 +44,26 @@ contentLoader.loadJson('weaponsofwar.json', function(err, jsonData) {
 
 <div class="weaponsofwar-page-container">
 
-
 <section class="weaponsofwar-heading-container">
-<h2>Tank</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lacinia felis et erat vulputate congue.
-    </p>
+<h2>${jsonData.pistolTitle}</h2>
+<p>${jsonData.pistolBody}</p>
     </section>
 
 
 <section class="cards">
+
+${tanks.map(Data =>
+`
+
 <article>
 <div class="weapon-card--tank">
 <div class="weapon-card__top">
 
 <div class="weapon-card__image-container--full">
-<img class="weapon-card-image--full" src="images/MarkIV.jpg">
+<img class="weapon-card-image--full" src="${Data.image}">
     </div>
 <div class="weapon-card__top_text">
-<h2>Mark IV</h2>
+<h2>${Data.name}</h2>
     </div>
 <div class="image-cover"></div>
     </div>   
@@ -71,21 +72,21 @@ contentLoader.loadJson('weaponsofwar.json', function(err, jsonData) {
 <div class="weapon-card__bottom__top-row">
 <div class="weapon-card__text-container">
 <p class="weapon-card__text-container-top">Introduction</p>
-<p class="weapon-card__text-container-bottom">20 RPM</p>
+<p class="weapon-card__text-container-bottom">${Data.introduction}</p>
     </div>
 <div class="weapon-card__text-container">
 <p class="weapon-card__text-container-top">Range</p>
-<p class="weapon-card__text-container-bottom">1896</p>
+<p class="weapon-card__text-container-bottom">${Data.range}</p>
     </div>                
     </div>
 <div class="weapon-card__bottom__top-row">
 <div class="weapon-card__text-container">
 <p class="weapon-card__text-container-top">Armour</p>
-<p class="weapon-card__text-container-bottom">150-200 m</p>
+<p class="weapon-card__text-container-bottom">${Data.armour}</p>
     </div>
 <div class="weapon-card__text-container">
 <p class="weapon-card__text-container-top">Max Speed</p>
-<p class="weapon-card__text-container-bottom">Feederie Brothers</p>
+<p class="weapon-card__text-container-bottom">${Data.speed}</p>
     </div>                
     </div>
 <div class="weapon-card__tankweapon">
@@ -94,8 +95,8 @@ contentLoader.loadJson('weaponsofwar.json', function(err, jsonData) {
 <p class="weapon-card__text-container-bottom--tank">Secondary</p>
     </div>  
 <div class="weapon-card__text-container--tank-right">
-<p class="weapon-card__text-container-top--tank-right">Two 6-pounder (57-mm) 6 cwt QF guns</p>
-<p class="weapon-card__text-container-bottom--tank-right">Three .303 in Lewis guns</p>
+<p class="weapon-card__text-container-top--tank-right">${Data.maingun}</p>
+<p class="weapon-card__text-container-bottom--tank-right">${Data.secondarygun}</p>
     </div>                                
     </div>
 
@@ -110,34 +111,22 @@ contentLoader.loadJson('weaponsofwar.json', function(err, jsonData) {
     </section>
 
 
-    </div>                                   
+
+
+
+
+    </div>                  
 
 `;
 
-    document.getElementById('cont').innerHTML = markup;
+        document.getElementById('cont').innerHTML = markup;
 
-});
+    });
 
 </script>
 
+<!--So in here you would load your json data in and pass it into the template above and then call this and that would load your page-->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!--load json by calling the functions-->
 
 

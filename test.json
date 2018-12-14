@@ -1,15 +1,13 @@
 {
-   "homeTown": "Glasgow", 
-    "members": [
+   "homeTown": "Glasgow",
+    "jumboTitle": "Wtf",
+    "pistols": [
         {
-            "name": "Random name",
-            "age": 29,
-            
-            "powers": [
-                "Radiation resistance",
-                "Turning tiny",
-                "Radiation blast"
-            ]
+            "name": "Luger P08",
+            "fireRate": "115 rpm",
+            "produced": "1990",
+            "effectiveRange": "55yd",
+            "designer": "Georg Luger"   
         },
         {
             "name": "Random name 2",

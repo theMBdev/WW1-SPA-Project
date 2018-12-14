@@ -1,0 +1,156 @@
+{
+    "homeTown": "Metro City", 
+    "jumboTitle": "Infintry Weapons",
+    
+    "pistolTitle": "Pistols", 
+    "pistolBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lacinia felis et erat vulputate congue.",
+    
+    "rifleTitle": "Rifles", 
+    "rifleBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lacinia felis et erat vulputate congue.",
+    
+    "machinegunTitle": "Machine Gun", 
+    "machinegunBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lacinia felis et erat vulputate congue.",
+    
+    "shotgunTitle": "Shotgun", 
+    "shotgunBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lacinia felis et erat vulputate congue.",
+    
+    "pistols": [
+        {
+            "name": "Luger P08",
+            "fireRate": "115 rpm",
+            "produced": "1990",
+            "effectiveRange": "55yd",
+            "designer": "Georg Luger",
+            "image": "/images/LugerP08.png" 
+        },
+        {
+           "name": "M1911",
+            "fireRate": "20-30 rpm",
+            "produced": "1911",
+            "effectiveRange": "55yd",
+            "designer": "John Browning",
+            "image": "/images/M1911.png" 
+        },
+        {
+           "name": "Mauser C96",
+            "fireRate": "20 - 30 rpm",
+            "produced": "1896",
+            "effectiveRange": "160-220yd",
+            "designer": "Feederie Brothers",
+            "image": "/images/mauser.png"
+        },
+        {
+           "name": "Webley MK VI",
+            "fireRate": "20-30 rpm",
+            "produced": "1887",
+            "effectiveRange": "50yd",
+            "designer": "Webley & Scott",
+            "image": "/images/Webley_MKV.png"
+        },
+        {
+           "name": "Roth-Steyr M1907",
+            "fireRate": "900 rpm",
+            "produced": "1908",
+            "effectiveRange": "80yd",
+            "designer": "Karel Kmka",
+            "image": "/images/roth_steyr.png"
+        }
+    ],
+    
+       "rifles": [
+        {
+            "name": "Lee-Enfield",
+            "fireRate": "20-30 rpm",
+            "produced": "1903",
+            "effectiveRange": "550yd",
+            "designer": "Lee, Enfield",
+            "image": "/images/lee-en.gif" 
+        },
+        {
+           "name": "Mauser Gewehr 98",
+            "fireRate": "15 rpm",
+            "produced": "1898",
+            "effectiveRange": "550yd",
+            "designer": "Paul Mauser",
+            "image": "/images/M1911.png" 
+        },
+        {
+           "name": "M1903 Springfield",
+            "fireRate": "10-15 rpm",
+            "produced": "1896",
+            "effectiveRange": "1000yd",
+            "designer": "Springfield Armory",
+            "image": "/images/M1903-Springfield.gif"
+        },
+        {
+           "name": "Mosin-Nagano M91",
+            "fireRate": "Variable",
+            "produced": "1887",
+            "effectiveRange": "550yd",
+            "designer": "Cpt Mosin, Nagant",
+            "image": "/images/Mosin-NaganoM91.png"
+        },
+        {
+           "name": "M1917 Enfield",
+            "fireRate": "20-30 rpm",
+            "produced": "1908",
+            "effectiveRange": "600yd",
+            "designer": "Lee, Enfield",
+            "image": "/images/.png"
+        }
+    ],
+    
+    "machineguns": [
+        {
+            "name": "Lewis gun",
+            "fireRate": "500-600 rpm",
+            "produced": "1913",
+            "effectiveRange": "880yd",
+            "designer": "2 or 3 guys",
+            "image": "/images/LewisGun.png" 
+        },
+        {
+           "name": "Browning auto rifle",
+            "fireRate": "500rpm",
+            "produced": "1917",
+            "effectiveRange": "1500yd",
+            "designer": "John Browning",
+            "image": "/images/Browning-automatic-rifle.png" 
+        },
+        {
+           "name": "Madsen LMG",
+            "fireRate": "450 rpm",
+            "produced": "1989",
+            "effectiveRange": "1000yd",
+            "designer": "Rasmussen&Schoubue",
+            "image": "/images/madsen-mg.png"
+        }
+    ],
+    
+    "shotguns": [
+        {
+            "name": "Winchester 1897",
+            "action": "Pump action",
+            "produced": "1897",
+            "feedsystem": "5 round",
+            "designer": "John Browning",
+            "image": "/images/.png" 
+        },
+        {
+           "name": "Remington model 10",
+            "action": "Pump action",
+            "produced": "1908",
+            "feedsystem": "6 round",
+            "designer": "John Pedersen",
+            "image": "/images/.png" 
+        },
+        {
+           "name": "Browning auto 5",
+            "action": "Semi-Automatic",
+            "produced": "1902",
+            "feedsystem": "2 or 4 round",
+            "designer": "John Browning",
+            "image": "/images/Browning_auto_5.png"
+        }
+    ]
+}

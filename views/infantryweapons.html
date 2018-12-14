@@ -15,15 +15,22 @@
 $('html,body').scrollTop(0);
 
 // load wepons json
-contentLoader.loadJson('weaponsofwar.json', function(err, jsonData) {
+contentLoader.loadJson('infantryweapons.json', function(err, jsonData) {
     if (err) { throw err; }    
 
-
     var jumboData = jsonData['jumboTitle'];
-    var cardData = jsonData['cards'];    
+    var cardData = jsonData['pistols'];    
 
-    console.log('Data Guns',jsonData['jumboTitle']);
-    console.log(cardData[1].title);
+    console.log('Data Guns',jsonData['homeTown']);
+    //console.log(cardData[1].name);
+    
+    
+    var pistols = jsonData['pistols']; 
+    var rifles = jsonData['rifles']; 
+    var machineguns = jsonData['machineguns']; 
+    var shotguns = jsonData['shotguns']; 
+   // var machineGuns = jsonData['pistols']; 
+    //var shotguns = jsonData['pistols']; 
     // And then create our markup: Load json here this should be your json file
     // loop this to catch all
     // store json in a thing like person
@@ -47,21 +54,23 @@ contentLoader.loadJson('weaponsofwar.json', function(err, jsonData) {
 <div class="weaponsofwar-page-container">
 
 <section class="weaponsofwar-heading-container">
-<h2>Pistol</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lacinia felis et erat vulputate congue.
-    </p>
+<h2>${jsonData.pistolTitle}</h2>
+<p>${jsonData.pistolBody}</p>
     </section>
 
 
 <section class="cards">
+
+${pistols.map(Data =>
+`
 <article>
 <div class="weapon-card">
 <div class="weapon-card__top">
 <div class="weapon-card__image-container">
-<img class="weapon-card-image" align="left" src="images/mauser.png">
+<img class="weapon-card-image" align="left" src="${Data.image}">
     </div>
 <div class="weapon-card__top_text">
-<h2>Mauser C96</h2>
+<h2>${Data.name}</h2>
     </div>
     </div>   
 
@@ -69,21 +78,21 @@ contentLoader.loadJson('weaponsofwar.json', function(err, jsonData) {
 <div class="weapon-card__bottom__top-row">
 <div class="weapon-card__text-container">
 <p class="weapon-card__text-container-top">Fire Rate</p>
-<p class="weapon-card__text-container-bottom">20 RPM</p>
+<p class="weapon-card__text-container-bottom">${Data.fireRate}</p>
     </div>
 <div class="weapon-card__text-container">
 <p class="weapon-card__text-container-top">Produced</p>
-<p class="weapon-card__text-container-bottom">1896</p>
+<p class="weapon-card__text-container-bottom">${Data.produced}</p>
     </div>                
     </div>
 <div class="weapon-card__bottom__top-row">
 <div class="weapon-card__text-container">
 <p class="weapon-card__text-container-top">Effective Range</p>
-<p class="weapon-card__text-container-bottom">150-200 m</p>
+<p class="weapon-card__text-container-bottom">${Data.effectiveRange}</p>
     </div>
 <div class="weapon-card__text-container">
 <p class="weapon-card__text-container-top">Designer</p>
-<p class="weapon-card__text-container-bottom">Feederie Brothers</p>
+<p class="weapon-card__text-container-bottom">${Data.designer}</p>
     </div>                
     </div>
 <div class="weapon-card__bottom_text-top">
@@ -91,30 +100,89 @@ contentLoader.loadJson('weaponsofwar.json', function(err, jsonData) {
     </div>
     </div>
     </div>     
-    </article>
+    </article>`
 
+               ).join("")}
+              
     </section>
     
+             
+          
+
+<section class="weaponsofwar-heading-container">
+<h2>${jsonData.rifleTitle}</h2>
+<p>${jsonData.rifleBody}</p>
+    </section>
+
+
+<section class="cards">
+
+${rifles.map(Data =>
+`
+<article>
+<div class="weapon-card">
+<div class="weapon-card__top">
+<div class="weapon-card__image-container">
+<img class="weapon-card-image" align="left" src="${Data.image}">
+    </div>
+<div class="weapon-card__top_text">
+<h2>${Data.name}</h2>
+    </div>
+    </div>   
+
+<div class="weapon-card__bottom">
+<div class="weapon-card__bottom__top-row">
+<div class="weapon-card__text-container">
+<p class="weapon-card__text-container-top">Fire Rate</p>
+<p class="weapon-card__text-container-bottom">${Data.fireRate}</p>
+    </div>
+<div class="weapon-card__text-container">
+<p class="weapon-card__text-container-top">Produced</p>
+<p class="weapon-card__text-container-bottom">${Data.produced}</p>
+    </div>                
+    </div>
+<div class="weapon-card__bottom__top-row">
+<div class="weapon-card__text-container">
+<p class="weapon-card__text-container-top">Effective Range</p>
+<p class="weapon-card__text-container-bottom">${Data.effectiveRange}</p>
+    </div>
+<div class="weapon-card__text-container">
+<p class="weapon-card__text-container-top">Designer</p>
+<p class="weapon-card__text-container-bottom">${Data.designer}</p>
+    </div>                
+    </div>
+<div class="weapon-card__bottom_text-top">
+
+    </div>
+    </div>
+    </div>     
+    </article>`
+
+               ).join("")}
+              
+    </section>
 
 
 
 
 <section class="weaponsofwar-heading-container">
-<h2>Rifle</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lacinia felis et erat vulputate congue.
-    </p>
+<h2>${jsonData.machinegunTitle}</h2>
+<p>${jsonData.machinegunBody}</p>
     </section>
 
 
 <section class="cards">
+
+${machineguns.map(Data =>
+`
 <article>
 <div class="weapon-card">
 <div class="weapon-card__top">
 <div class="weapon-card__image-container">
-<img class="weapon-card-image" align="left" src="images/mauser.png">
+<img class="weapon-card-image" align="left" src="${Data.image}">
     </div>
 <div class="weapon-card__top_text">
-<h2>Mauser C96</h2>
+<h2>${Data.name}</h2>
     </div>
     </div>   
 
@@ -122,21 +190,21 @@ contentLoader.loadJson('weaponsofwar.json', function(err, jsonData) {
 <div class="weapon-card__bottom__top-row">
 <div class="weapon-card__text-container">
 <p class="weapon-card__text-container-top">Fire Rate</p>
-<p class="weapon-card__text-container-bottom">20 RPM</p>
+<p class="weapon-card__text-container-bottom">${Data.fireRate}</p>
     </div>
 <div class="weapon-card__text-container">
 <p class="weapon-card__text-container-top">Produced</p>
-<p class="weapon-card__text-container-bottom">1896</p>
+<p class="weapon-card__text-container-bottom">${Data.produced}</p>
     </div>                
     </div>
 <div class="weapon-card__bottom__top-row">
 <div class="weapon-card__text-container">
 <p class="weapon-card__text-container-top">Effective Range</p>
-<p class="weapon-card__text-container-bottom">150-200 m</p>
+<p class="weapon-card__text-container-bottom">${Data.effectiveRange}</p>
     </div>
 <div class="weapon-card__text-container">
 <p class="weapon-card__text-container-top">Designer</p>
-<p class="weapon-card__text-container-bottom">Feederie Brothers</p>
+<p class="weapon-card__text-container-bottom">${Data.designer}</p>
     </div>                
     </div>
 <div class="weapon-card__bottom_text-top">
@@ -144,9 +212,70 @@ contentLoader.loadJson('weaponsofwar.json', function(err, jsonData) {
     </div>
     </div>
     </div>     
-    </article>
+    </article>`
 
+               ).join("")}
+              
     </section>
+
+
+
+
+<section class="weaponsofwar-heading-container">
+<h2>${jsonData.shotgunTitle}</h2>
+<p>${jsonData.shotgunBody}</p>
+    </section>
+
+
+<section class="cards">
+
+${shotguns.map(Data =>
+`
+<article>
+<div class="weapon-card">
+<div class="weapon-card__top">
+<div class="weapon-card__image-container">
+<img class="weapon-card-image" align="left" src="${Data.image}">
+    </div>
+<div class="weapon-card__top_text">
+<h2>${Data.name}</h2>
+    </div>
+    </div>   
+
+<div class="weapon-card__bottom">
+<div class="weapon-card__bottom__top-row">
+<div class="weapon-card__text-container">
+<p class="weapon-card__text-container-top">Action</p>
+<p class="weapon-card__text-container-bottom">${Data.action}</p>
+    </div>
+<div class="weapon-card__text-container">
+<p class="weapon-card__text-container-top">Produced</p>
+<p class="weapon-card__text-container-bottom">${Data.produced}</p>
+    </div>                
+    </div>
+<div class="weapon-card__bottom__top-row">
+<div class="weapon-card__text-container">
+<p class="weapon-card__text-container-top">Feed System</p>
+<p class="weapon-card__text-container-bottom">${Data.feedsystem}</p>
+    </div>
+<div class="weapon-card__text-container">
+<p class="weapon-card__text-container-top">Designer</p>
+<p class="weapon-card__text-container-bottom">${Data.designer}</p>
+    </div>                
+    </div>
+<div class="weapon-card__bottom_text-top">
+
+    </div>
+    </div>
+    </div>     
+    </article>`
+
+               ).join("")}
+              
+    </section>
+
+
+
 
 
     </div>                  
