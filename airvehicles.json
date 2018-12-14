@@ -1,0 +1,42 @@
+{
+    "homeTown": "Metro City", 
+    "jumboTitle": "Air Vehicles",
+    
+    "planeTitle": "Planes", 
+    "planeBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lacinia felis et erat vulputate congue.",
+    
+    "planes": [
+        {
+            "name": "Albatross d.II",
+            "introduction": "1916",
+            "range": "263 km",
+            "ceiling": "5180 m",
+            "speed": "175 km/h",
+            "image": "/images/Albatros_D.II.jpg" 
+        },
+        {
+           "name": "Bristol f2 fighter",
+            "introduction": "1916",
+            "range": "595 km",
+            "ceiling": "5500 m",
+            "speed": "198 km/h",
+            "image": "/images/Bristolf2fighter.jpg"  
+        },
+        {
+           "name": "Nieuport 17",
+            "introduction": "1916",
+            "range": "250 km",
+            "ceiling": "5300 m",
+            "speed": "177 km/h",
+            "image": "/images/Nieuport17.jpg" 
+        },
+        {
+           "name": "Fokker vi",
+            "introduction": "1917",
+            "range": "250 km",
+            "ceiling": "6000 m",
+            "speed": "197 km/h",
+            "image": "/images/Fokkervi.jpg" 
+        }
+    ]
+}

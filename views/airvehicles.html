@@ -1,0 +1,123 @@
+<body>   
+    <head>
+
+        <meta charset="UTF-8">
+        <title>JSON Tester</title>
+
+    </head>
+    <div id="cont"></div>
+
+
+</body>
+
+<script>
+// auto set browser to top of page
+$('html,body').scrollTop(0);
+
+// load wepons json
+contentLoader.loadJson('airvehicles.json', function(err, jsonData) {
+    if (err) { throw err; }    
+
+    var jumboData = jsonData['jumboTitle'];
+    var cardData = jsonData['pistols'];    
+
+    console.log('Data Guns',jsonData['homeTown']);
+    //console.log(cardData[1].name);
+    
+    
+    var planes = jsonData['planes']; 
+
+   // var machineGuns = jsonData['pistols']; 
+    //var shotguns = jsonData['pistols']; 
+    // And then create our markup: Load json here this should be your json file
+    // loop this to catch all
+    // store json in a thing like person
+    //https://wesbos.com/template-strings-html/   <<shows loops
+
+
+    const markup = `
+<div class="jumbotron">              
+<div class="jumbotron__textcontainer">
+<div class="jumbotron__title">
+<h1>${jsonData['jumboTitle']}</h1>
+    </div>
+
+<div class="jumbotron__text">
+<p>${jsonData['jumboBody']}</p>
+    </div>
+    </div>
+
+    </div>
+
+<div class="weaponsofwar-page-container">
+
+<section class="weaponsofwar-heading-container">
+<h2>${jsonData.planeTitle}</h2>
+<p>${jsonData.planeBody}</p>
+    </section>
+
+
+<section class="cards">
+
+${planes.map(Data =>
+`
+<article>
+<div class="weapon-card">
+<div class="weapon-card__top">
+<div class="weapon-card__image-container--full">
+<img class="weapon-card-image--full" src="${Data.image}">
+    </div>
+<div class="weapon-card__top_text">
+<h2>${Data.name}</h2>
+    </div>
+<div class="image-cover"></div>
+    </div> 
+
+
+<div class="weapon-card__bottom">
+<div class="weapon-card__bottom__top-row">
+<div class="weapon-card__text-container">
+<p class="weapon-card__text-container-top">Introduction</p>
+<p class="weapon-card__text-container-bottom">${Data.introduction}</p>
+    </div>
+<div class="weapon-card__text-container">
+<p class="weapon-card__text-container-top">Range</p>
+<p class="weapon-card__text-container-bottom">${Data.range}</p>
+    </div>                
+    </div>
+<div class="weapon-card__bottom__top-row">
+<div class="weapon-card__text-container">
+<p class="weapon-card__text-container-top">Ceiling</p>
+<p class="weapon-card__text-container-bottom">${Data.ceiling}</p>
+    </div>
+<div class="weapon-card__text-container">
+<p class="weapon-card__text-container-top">Speed</p>
+<p class="weapon-card__text-container-bottom">${Data.speed}</p>
+    </div>                
+    </div>
+<div class="weapon-card__bottom_text-top">
+
+    </div>
+    </div>
+    </div>     
+    </article>`
+
+               ).join("")}
+              
+    </section>
+    
+    </div>                  
+
+`;
+
+    document.getElementById('cont').innerHTML = markup;
+
+});
+
+</script>
+
+<!--So in here you would load your json data in and pass it into the template above and then call this and that would load your page-->
+
+<!--load json by calling the functions-->
+
+
