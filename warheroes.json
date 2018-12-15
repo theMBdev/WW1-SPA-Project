@@ -1,27 +1,24 @@
 {
     "homeTown": "Metro City", 
-    "jumboTitle": "Infintry Weapons",
-    
-    "pistolTitle": "Pistols", 
-    "pistolBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lacinia felis et erat vulputate congue.",
-    
-    "rifleTitle": "Rifles", 
-    "rifleBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lacinia felis et erat vulputate congue.",
-    
-    "machinegunTitle": "Machine Gun", 
-    "machinegunBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lacinia felis et erat vulputate congue.",
-    
-    "shotgunTitle": "Shotgun", 
-    "shotgunBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lacinia felis et erat vulputate congue.",
-    
-    "pistols": [
-        {
-            "name": "Luger P08",
-            "fireRate": "115 rpm",
-            "produced": "1990",
-            "effectiveRange": "55yd",
-            "designer": "Georg Luger",
-            "image": "/images/LugerP08.png" 
+    "jumboTitle": "War Heros",
+        
+    "warHeroes": [
+        {            
+            "publish": "1918",            
+            "description": "reference in newspaper;portrait (14 September)",
+            "source": "Chronicle, 31 August 1918, p. 31, col. c  p. 39, col. a;Chronicle, 7 September 1918, p. 39, col. b;Chronicle, 14 September 1918, p. 24, col. e",            
+            
+            "name": "Percy Oliver Gunn",
+            "life": "1889-1918",
+            "home": "South Adelaide - Australia",
+            "rank": "Sergeant",
+            "number": "Service number 816",
+            "battalion": "2nd Machine Gun Battalion",
+            "war": "World War, 1914-1918 ",
+            "death": "9 August 1918, France",
+            "deathcause": "Died of wounds",
+            "age": "Aged 29",
+            "family": "youngest son, brother of Mrs. A. E. Moller and Mrs. A. R. Wenzel."            
         },
         {
            "name": "M1911",
