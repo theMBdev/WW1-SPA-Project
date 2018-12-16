@@ -15,7 +15,7 @@
 $('html,body').scrollTop(0);
 
 // load wepons json
-contentLoader.loadJson('airvehicles.json', function(err, jsonData) {
+contentLoader.loadJson('json/airvehicles.json', function(err, jsonData) {
     if (err) { throw err; }    
 
     var jumboData = jsonData['jumboTitle'];
@@ -53,7 +53,7 @@ contentLoader.loadJson('airvehicles.json', function(err, jsonData) {
 
 <section class="weaponsofwar-heading-container">
 <h2>${jsonData.planeTitle}</h2>
-<p>${jsonData.planeBody}</p>
+<p class="weaponsofwar-heading-container__text">${jsonData.planeBody}</p>
     </section>
 
 

@@ -15,7 +15,7 @@
 $('html,body').scrollTop(0);
 
 // load wepons json
-contentLoader.loadJson('infantryweapons.json', function(err, jsonData) {
+contentLoader.loadJson('json/infantryweapons.json', function(err, jsonData) {
     if (err) { throw err; }    
 
     var jumboData = jsonData['jumboTitle'];
@@ -55,7 +55,7 @@ contentLoader.loadJson('infantryweapons.json', function(err, jsonData) {
 
 <section class="weaponsofwar-heading-container">
 <h2>${jsonData.pistolTitle}</h2>
-<p>${jsonData.pistolBody}</p>
+<p class="weaponsofwar-heading-container__text">${jsonData.pistolBody}</p>
     </section>
 
 
@@ -111,7 +111,7 @@ ${pistols.map(Data =>
 
 <section class="weaponsofwar-heading-container">
 <h2>${jsonData.rifleTitle}</h2>
-<p>${jsonData.rifleBody}</p>
+<p class="weaponsofwar-heading-container__text">${jsonData.rifleBody}</p>
     </section>
 
 
@@ -167,7 +167,7 @@ ${rifles.map(Data =>
 
 <section class="weaponsofwar-heading-container">
 <h2>${jsonData.machinegunTitle}</h2>
-<p>${jsonData.machinegunBody}</p>
+<p class="weaponsofwar-heading-container__text">${jsonData.machinegunBody}</p>
     </section>
 
 
@@ -223,7 +223,7 @@ ${machineguns.map(Data =>
 
 <section class="weaponsofwar-heading-container">
 <h2>${jsonData.shotgunTitle}</h2>
-<p>${jsonData.shotgunBody}</p>
+<p class="weaponsofwar-heading-container__text">${jsonData.shotgunBody}</p>
     </section>
 
 

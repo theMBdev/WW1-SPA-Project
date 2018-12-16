@@ -8,7 +8,7 @@
 function loadJsonFunc() {
     console.log('Loading slide json 3');
 
-    contentLoader.loadJson('slidedata.json', function(err, jsonData) {
+    contentLoader.loadJson('json/slidedata.json', function(err, jsonData) {
         if (err) { throw err; }    
 
         //        console.log('Data slide', jsonData['slideshow1'])
@@ -26,7 +26,7 @@ function loadJsonFunc() {
 
 ${slide.map(slideData =>
 
-`<div class="mySlides fade">              
+            `<div class="mySlides fade">              
 <div class="slide__title">
 <h3>${slideData.title}</h3>
     </div>
@@ -73,7 +73,7 @@ ${slide.map(slideData =>
         var output = document.getElementById("year");
         output.innerHTML = slider.value;
         document.getElementById('year').innerHTML = "1914";
-        
+
         slider.oninput = function() {    
 
             if (this.value == 1) {
@@ -249,7 +249,7 @@ ${slide.map(slideData =>
 
 
 // load home page json data        // LOAD ORDER 1
-contentLoader.loadJson('home.json', function(err, jsonData) {
+contentLoader.loadJson('json/home.json', function(err, jsonData) {
     console.log('Loading main page json 1')
 
     if (err) { throw err; }    
@@ -263,7 +263,8 @@ contentLoader.loadJson('home.json', function(err, jsonData) {
     //    console.log(cardData[1].title);
 
     const markup = `
-<div class="parallax"></div>
+<div class="parallax">
+
 <div class="jumbotron--homepage">            
 <div class="jumbotron__textcontainer">
 <div class="jumbotron__title">
@@ -496,9 +497,8 @@ ${cardData.map(
     </div>
 
     </section>
-<footer class="home-footer">
 
-    </footer>
+    </div>
 
 `;
 

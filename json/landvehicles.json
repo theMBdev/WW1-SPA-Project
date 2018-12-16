@@ -3,8 +3,8 @@
     "jumboTitle": "Land Vehicles",
     
     "tankTitle": "Tanks", 
-    "tankBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lacinia felis et erat vulputate congue.",
-    
+    "tankBody": "Ideas for “land battleships” go back at least as far as the Medieval Era; plans for one are included among the drawings of Leonardo da Vinci. The long-sought weapon became reality during the First World War. Improved tanks were deployed during the war, but breakdowns remained a significant problem that led many commanders to believe the tank would never play a major role in warfare. The Germans developed an armored fighting vehicle only in response to the British and French deploying tanks. The only German design of the war, A7V, was an awe-inspiring but cumbersome beast that resembled a one-story building on treads.", 
+   
     "tanks": [
         {
             "name": "Mark IV",
@@ -52,7 +52,7 @@
             "range": "80m",
             "armour": "14mm",
             "speed": "13 km/h",
-            "image": "/images/MarkIV.jpg",
+            "image": "/images/MediumMarkAWhippet.png",
             "maingun": "4 × 0.303 inch Hotchkiss machine guns",
             "secondarygun": "none"
         }

@@ -3,16 +3,19 @@
     "jumboTitle": "Infintry Weapons",
     
     "pistolTitle": "Pistols", 
-    "pistolBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lacinia felis et erat vulputate congue.",
+    "pistolBody": "The pistol, originally designed as a cavalry weapon, was the staple weapon for a variety of personnel during World War One (and beyond). Traditionally issued to officers of all armies the pistol was also issued to military police, airmen and tank operators.",
+    
     
     "rifleTitle": "Rifles", 
-    "rifleBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lacinia felis et erat vulputate congue.",
+    "rifleBody": "During WWI, millions of men were given rifles and sent into the trenches to fight. They were the weapons that turned civilians into soldiers. Machine-guns and artillery might have defined the war, but the rifle was a soldier’s constant companion.",
+    
     
     "machinegunTitle": "Machine Gun", 
-    "machinegunBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lacinia felis et erat vulputate congue.",
+    "machinegunBody": "Most machine guns of World War 1 were based on Hiram Maxim’s 1884 design. They had a sustained fire of 450–600 rounds per minute, allowing defenders to cut down attacking waves of enemy troops like a scythe cutting wheat. There was some speculation that the machine gun would completely replace the rifle. Contrary to popular belief, machine guns were not the most lethal weapon of the Great War. That dubious distinction goes to the artillery.",
+    
     
     "shotgunTitle": "Shotgun", 
-    "shotgunBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lacinia felis et erat vulputate congue.",
+    "shotgunBody": "The U.S. military was the only major power to use shotguns in World War I, issuing a modified Winchester Model 1897, known officially as the Model 1917 Trench Shotgun . (Remington Model 12 and other commercially available shotguns were also issued to the American Expeditionary Force.) The so-called “trench gun” version of the 1897 shortened the barrel to make it easier to wield in close quarters and added a heat shield to prevent accidental handling of a hot barrel.",
     
     "pistols": [
         {

@@ -1,0 +1,25 @@
+{
+   "jumboTitle": "Weapons of War",     
+   "jumboBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lacinia felis et erat vulputate congue. Etiam sed est viverra, accumsan.",    
+    
+    "cards": [
+        {
+            "title": "Land Vehicles",
+            "body": "World War 1 tanks were the first in history, great machines armed with cannons and machine guns, and designed to plow through barbed wire and trenches. The British realized that they'd need new technology to break the stalemate, and began the 'Landship Project' to develop the equivalent of a ship to operate on land. They deployed the first tank, the Mark I, in September, 1916, and the world was forever changed.",
+            "image": "images/tank.jpg",
+            "link": "./views/landvehicles.html"
+        },
+        {
+            "title": "Air Vehicles",
+            "body": "World War One airplanes began as primitive, unarmed artillery spotters that could barely take offensive action - and ended as powerful bombers and sleek modern fighters. Germany, the UK, and France led the way in aircraft development, creating iconic aircraft like the SPAD, Sopwith Camel, and the scourge of allied pilots, the German Fokker.",
+            "image": "images/air.jpg",
+            "link": "./views/airvehicles.html"
+        },      
+        {
+            "title": "Infantry Weapons",
+            "body": "World War 1 weapons run the gamut from bolt action rifles like the Gewehr 98 and Lee-Enfield to sophisticated machine guns like the Lewis Gun and pistols used well into the 20th Century, like the Colt 1911. The First World War involved a great modernizing of armies, weapons, and tactics, and as the very nature of war changed from offensive to static, so too did the weapons needed to fight that war.",
+            "image": "images/infintary.jpg" ,
+            "link": "./views/infantryweapons.html"
+        }       
+    ]
+}

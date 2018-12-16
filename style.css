@@ -206,7 +206,7 @@ body {
     background-color: blanchedalmond;
     z-index: 1;
     position: relative;
-    top: -2400px;
+
     background-color: rgba(255,255,255,0.0);
     color: white;
 }
@@ -227,7 +227,7 @@ body {
 
 /*weapons of war mobile*/
 .card {    
-    height: 530px;
+    height: 590px;
     margin: 10px;
 
     border-radius: 5px;
@@ -236,8 +236,6 @@ body {
 
 .card__image-holder {
     height: 250px;
-
-    background-color: aqua;
 }
 
 .card__image {
@@ -263,7 +261,7 @@ body {
 .card__button-holder {
     text-align: center;
     position: relative;
-    bottom: -20px;
+    bottom: -70px;
 }
 
 .card__button {
@@ -306,7 +304,7 @@ body {
     background-image: url("images/Chateauwood.jpg");
 
     /* Set a specific height */
-    min-height: 2400px; 
+    min-height: 2100px; 
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -319,14 +317,14 @@ body {
 /*home page mobile*/
 .banner {
     position: relative;
-    top: -2400px;
+
     height: 60px;
     background-color: #9D8F8F;    
 }
 
 .banner h3 {
     position: relative;
-    top: -2400px;
+
     top: 50%;
     transform: translateY(-50%);
     text-align: center;   
@@ -335,7 +333,7 @@ body {
 
 .slide {
     position: relative;
-    top: -2400px;
+
     height: auto;
     background-color: white;
     z-index: 10;
@@ -352,7 +350,7 @@ body {
 
 .banner-bottom {
     position: relative;
-    top: -2400px;
+
     height: 60px;
     background-color: #9D8F8F;    
     color: white;
@@ -367,7 +365,7 @@ body {
 
 .static-slide {
     position: relative;
-    top: -2400px;
+
     height: auto;
     background-color: white;
 }
@@ -387,12 +385,12 @@ body {
 
 .link-card {
     position: relative;
-    top: -2400px;
+
     height: 300px;
     background-color: rgba(0,0,0,0.4);
     z-index: 10;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-top: 0px;
     color: white;
 }
 
@@ -479,8 +477,9 @@ body {
 
 .text-holder {                
     margin: 5px auto;
-    width: 150px;
+    width: 170px;
     height: auto;
+
     background-color: #BCBAB8;
     border-radius: 5px;
     transition: 1000ms linear;
@@ -488,9 +487,9 @@ body {
 
 .text-holder__text { 
     /*                font-size: calc(7px + 0.8vw);  */
-    font-size: 14px;
+    font-size: 16px;
     position: relative;
-    top: 3px;
+    top: 0px;
     border-radius: 5px;
     color: black;
 }
@@ -499,7 +498,7 @@ body {
     position: relative;
     width: 25px;
     left: -10px;
-    top: 3px;
+    top: 2px;
     float: right;
 }
 
@@ -512,7 +511,7 @@ body {
     width: 100%;
     height: 1200px;
     position: relative;
-    top: -2400px;
+
     z-index: 0;
     padding-bottom: 20px;
 }
@@ -629,7 +628,7 @@ body {
     width: 100%;
     background-color: black;
     position: relative;
-    top: -2400px;    
+
 }
 
 
@@ -779,8 +778,12 @@ body {
 
 .weaponsofwar-heading-container{    
     max-width: 800px;
-    margin: 100px auto 30px;
-    text-align: center;
+    margin: 50px auto 30px;
+    text-align: center;       
+}
+
+.weaponsofwar-heading-container__text { 
+    color: var(--lightest-black);
 }
 
 .weapon-card--tank {
@@ -821,7 +824,7 @@ body {
 
 .weapon-card__image-container--full {
     height: 100%;
-    
+
     width: 100%;   
 }
 
@@ -837,7 +840,7 @@ body {
     padding: 0;
     height: 100%;
     width: 100%;
-    object-fit: fill;
+    object-fit: cover;
     position: absolute;
     z-index: 0;
     border-radius: 5px 5px 0px 0px;
@@ -1069,7 +1072,7 @@ article {
         height: 300px;        
         z-index: 1;
         position: relative;
-        top: -2400px;
+
         background-color: rgba(255,255,255,0.0);
         color: white;
     }
@@ -1128,15 +1131,16 @@ article {
         height: 135px;        
     }
 
+    .card__button-holder {
+        text-align: center;
+        position: relative;
+        bottom: -20px;
+    }
+
     /*home page desktop*/
     .parallax { 
-        /* The image used */
         background-image: url("images/Chateauwood.jpg");
-
-        /* Set a specific height */
-        height: 2400px; 
-
-        /* Create the parallax scrolling effect */
+        min-height: 1920px; 
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
@@ -1149,8 +1153,6 @@ article {
         width: 60%;        
         border-top-right-radius: 100px;
         border-bottom-right-radius: 0px;
-
-        top: -2400px;
 
         background: #625757; /* Old browsers */
         background: -moz-linear-gradient(left, #625757 0%, #9d8f8f 100%); /* FF3.6-15 */
@@ -1183,7 +1185,6 @@ article {
 
     .slide__title h3 {    
         text-align: center;  
-        /*        padding: 30px 0px 0px;*/
     }
 
     .slide__text {    
@@ -1197,7 +1198,6 @@ article {
         width: 60%;
         float: right;
 
-        top: -2400px;
 
         background: #9d8f8f; /* Old browsers */
         background: -moz-linear-gradient(left, #9d8f8f 0%, #625757 100%); /* FF3.6-15 */
@@ -1240,7 +1240,7 @@ article {
 
     .banner-bottom--left {
         position: relative;
-        top: -2400px;
+
         width: 40%;
         background-color: aqua;
         height: 660px;
@@ -1263,7 +1263,7 @@ article {
         width: 100%;     
         background-color: rgba(0, 0, 0, 0.4);
         position: relative;
-        top: -2400px;
+
         display: block;
     }
 
@@ -1277,13 +1277,13 @@ article {
     }
 
     .link-card {
-        position: relative;
-        top: -20px;
+        position: relative;        
         height: 300px;
+
         background-color: rgba(0,0,0,0.0);        
         color: white;
         z-index: 15; 
-        
+
     }
 
     .link-card h3 {
@@ -1380,19 +1380,16 @@ article {
     }
 
     .text-holder {
-        margin: 5px auto;
-        width: 150px;
+        margin: 5px auto;       
         height: auto;
         background-color: #BCBAB8;
         border-radius: 5px;
         transition: 1000ms linear;
     }                
 
-    .text-holder__text { 
-        /*                font-size: calc(7px + 0.8vw);  */
-        font-size: 14px;
+    .text-holder__text {    
         position: relative;
-        top: 3px;
+        top: 0px;
     }
 
     .text-holder__img { 
@@ -1513,7 +1510,7 @@ article {
         width: 100%;
         background-color: black;
         position: relative;
-        top: -2400px;
+
     }
 
     /*Slide Stuff*/
