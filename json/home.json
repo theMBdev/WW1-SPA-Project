@@ -15,17 +15,17 @@
     "cardDetails": [
         {
             "title": "Life during war",
-            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet.",
+            "body": "See what life was like for people living at home and solders on the frontline",
             "link": "./views/lifeduringwar.html"
         },
         {
             "title": "Weapons of war",
-            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet.",
+            "body": "Have a browse of the wepons that caused destructing between 1914-1918",
             "link": "./views/weaponsofwar.html"
         },
         {
             "title": "War Heroes",
-            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur massa velit, cursus vehicula odio sodales sit amet.",
+            "body": "War heros remembered for there extraordinary efforts during the war",
             "link": "./views/warheroes.html"
         }
     ]
