@@ -52,7 +52,7 @@ a {
     padding: 20px 20px;
 
     text-decoration: none; 
-    color: white;
+    color: var(--white);
 }
 
 .header li a:hover,
@@ -66,7 +66,7 @@ a {
     font-size: 1.50em;
     padding: 15px 20px;
     text-decoration: none;
-    color: white;
+    color: var(--white);
 }
 
 /* menu */
@@ -188,6 +188,7 @@ body {
     font-family: 'Libre Franklin', sans-serif;
     padding: 0px;
     margin: 0px;
+    background-color: var(--lightest-grey);
     /*    height: -2400px; */
 }
 
@@ -208,7 +209,7 @@ body {
     position: relative;
 
     background-color: rgba(255,255,255,0.0);
-    color: white;
+    color: var(--white);
 }
 
 .jumbotron__textcontainer {
@@ -229,7 +230,7 @@ body {
 .card {    
     height: 590px;
     margin: 10px;
-
+    background-color: var(--white);
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2);
 }
@@ -283,7 +284,7 @@ body {
     background-color: rgba(255,255,255,0.0);
     border: solid 1px white;
     border-radius: 5px;
-    color: white;
+    color: var(--white);
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -328,14 +329,14 @@ body {
     top: 50%;
     transform: translateY(-50%);
     text-align: center;   
-    color: white;
+    color: var(--white);
 }
 
 .slide {
     position: relative;
 
     height: auto;
-    background-color: white;
+    background-color: var(--white);
     z-index: 10;
 }
 
@@ -353,7 +354,7 @@ body {
 
     height: 60px;
     background-color: #9D8F8F;    
-    color: white;
+    color: var(--white);
 }
 
 .banner-bottom h3 {
@@ -367,7 +368,7 @@ body {
     position: relative;
 
     height: auto;
-    background-color: white;
+    background-color: var(--white);
 }
 
 .static-slide__text {    
@@ -391,7 +392,7 @@ body {
     z-index: 10;
     margin-bottom: 0px;
     margin-top: 0px;
-    color: white;
+    color: var(--white);
 }
 
 .link-card h3 {
@@ -521,7 +522,7 @@ body {
     width: 90%;                
     margin: auto;
     padding-top: 40px;   
-    color: white;
+    color: var(--white);
 }
 
 .slider {
@@ -670,7 +671,7 @@ body {
     width: auto;
     padding: 16px;
     margin-top: -22px;
-    color: white;
+    color: var(--white);
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -977,8 +978,7 @@ body {
     grid-gap: 30px;
 }
 
-.cards {
-    max-width: 960px;
+.cards {   
     margin: 0 auto 30px;
 }
 
@@ -986,6 +986,194 @@ article {
     position: relative;
 }
 
+/*WARHERO PAGE MOBILE*/
+
+.warhero-card {    
+    border-radius: 5px;    
+    max-width: 400px;
+    min-width: 370px;
+    background-color:  var(--white);
+}
+
+.warhero-card > div {    
+    border-radius: 5px 5px 0px 0px;
+    /*    background-color: cadetblue;*/
+}
+
+.warhero-card p {    
+
+}
+
+.warhero-card {   
+    height: 410px;
+    margin: auto;
+    padding: 10px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: auto;
+    grid-template-areas: 
+        "z z z   z z z z z "
+        "z z z    z z z z z"
+        "a a a  b b b b b "
+        "a a a  b b b b b "
+        "c c c  d d d d d "
+        "c c c  d d d d d "
+        "e e e  f f f f f "
+        "e e e  f f f f f ";
+    align-items: start;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.11);
+}
+
+.warhero-card-top {
+    grid-area: y;
+}
+
+.warhero-card-details h3 {
+    font-size: 20px;
+    margin: 0px;
+}
+
+.warhero-card-details {   
+    grid-area: z;
+    text-align: right;
+    margin-bottom: 10px;
+    font-weight: 600;
+    background-color:  var(--mid-grey);
+    padding: 10px;
+    margin: -10px;
+
+}
+
+.griditem1 {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    background-color: var(--mid-grey);
+    height: 110px;  
+    text-align: right;    
+    padding: 20px;
+    font-weight: 600;
+
+}
+
+.warhero-card-title1 {
+    grid-area: a;
+    font-weight: 600;
+}
+
+.warhero-card-details1 {
+    grid-area: b;
+    padding-left: 10px;
+}
+
+.warhero-card-details1 p {
+
+}
+
+.warhero-card-title2 {
+    grid-area: c;
+    font-weight: 600;
+}
+.warhero-card-details2 {
+    grid-area: d;
+    padding-left: 10px;
+}
+
+.warhero-card-details2 p {    
+
+}
+
+.warhero-card-title3 {
+    grid-area: e;
+    font-weight: 600;
+}
+
+.warhero-card-details3 {
+    grid-area: f;
+    padding-left: 10px;
+}
+
+.warhero-card-details3 p {
+
+}
+
+/*LIFE AT HOME*/
+
+.ldw-column-left {
+    width: 100%;
+    padding: 10px;
+    background-color:  var(--white);
+}
+
+.ldw-column-right {
+    width: 100%;
+    padding: 10px;
+    background-color:  var(--white);
+}
+
+.ldw-column-right h4{
+    margin-top: 20px;
+}
+
+.ldw-column-left h4{
+    margin-top: 20px;
+}
+
+.ldw-column-right  h3{
+    margin-top: 20px;
+    margin-bottom: 5px;
+
+}
+
+.ldw-column-left h3{
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.ldw-row {
+
+}
+
+.seper {
+    margin-bottom: 1030px;
+}
+
+.lah-block-row {
+
+}
+
+.lah-block-column-left {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    margin: auto;  
+    height: 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--mid-grey);
+  
+
+}
+
+.lah-block-column-right  {
+    float: left;
+    width: 70%;
+    padding: 10px;
+    margin: auto;  
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    background-color: var(--lightest-grey);
+      
+}
+
+.image-wh {
+    width: 100%;
+}
 
 
 
@@ -1023,6 +1211,11 @@ article {
         content: "";
         clear: both;
         display: table;
+    }
+
+    .cards {
+        max-width: 900px;
+        margin: 0 auto 30px;
     }
 
 }
@@ -1074,7 +1267,7 @@ article {
         position: relative;
 
         background-color: rgba(255,255,255,0.0);
-        color: white;
+        color: var(--white);
     }
 
     .jumbotron__textcontainer {
@@ -1092,7 +1285,7 @@ article {
     /*    weapons of war desktop*/
     .card {
 
-        background-color: white;
+        background-color: var(--white);
         height: 330px;
         margin: 30px auto;
         padding: 0px;
@@ -1167,7 +1360,7 @@ article {
         transform: translateY(-50%);
         text-align: center;
         right: 100px;
-        color: white;
+        color: var(--white);
 
     }
 
@@ -1177,7 +1370,7 @@ article {
         right: calc(40% - 300px);
         height: 480px;
         width: 500px;
-        background-color: white;
+        background-color: var(--white);
         border-radius: 2px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.11);
         z-index: 10;
@@ -1217,7 +1410,7 @@ article {
         transform: translateY(-50%);
         text-align: right;
         right: calc(30% - 180px);
-        color: white;
+        color: var(--white);
 
     }
 
@@ -1227,7 +1420,7 @@ article {
         left: calc(40% - 300px);
         height: 480px;
         width: 500px;
-        background-color: white;
+        background-color: var(--white);
         border-radius: 2px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.11);
         z-index: 10;
@@ -1281,7 +1474,7 @@ article {
         height: 300px;
 
         background-color: rgba(0,0,0,0.0);        
-        color: white;
+        color: var(--white);
         z-index: 15; 
 
     }
@@ -1545,7 +1738,7 @@ article {
         width: auto;
         padding: 16px;
         margin-top: -22px;
-        color: white;
+        color: var(--white);
         font-weight: bold;
         font-size: 18px;
         transition: 0.6s ease;
@@ -1647,13 +1840,66 @@ article {
     .cards {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-        grid-gap: 30px;
+        grid-gap: 30px;        
     }
 
-    .cards {
-        max-width: 1400px;
-        margin: 0 auto 30px;
+    /*    LIFE AT WAR*/
+
+    .ldw-column-left {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        margin: auto;        
+        /*  height: 300px; */
     }
+
+    .ldw-column-right {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        margin: auto;
+    }
+
+    .ldw-row {
+        max-width: 1200px;   
+        margin: auto;
+    }
+
+    .ldw-row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .lah-block-column-left {
+        float: left;
+        width: 30%;
+        padding: 10px;
+        margin: auto;  
+        height: 100px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;   
+        text-align: 
+    }
+
+    .lah-block-column-right  {
+        float: left;
+        width: 70%;
+        padding: 10px;
+        margin: auto;  
+        height: 100px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;   
+        
+
+    }
+
+
+
 
 
 }
@@ -1671,4 +1917,11 @@ article {
 
 @media only screen and (max-width: 300px) {
     .prev, .next,.text {font-size: 11px}
+}
+
+@media only screen and (min-width: 1400px) { 
+    .cards {
+        max-width: 1400px;
+        margin: 0 auto 30px;
+    }
 }

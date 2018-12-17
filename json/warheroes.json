@@ -1,6 +1,8 @@
 {
     "homeTown": "Metro City", 
     "jumboTitle": "War Heros",
+    "title": "",
+    "body": "",
         
     "warHeroes": [
         {            
@@ -17,137 +19,195 @@
             "war": "World War, 1914-1918 ",
             "death": "9 August 1918, France",
             "deathcause": "Died of wounds",
-            "age": "Aged 29",
+            "age": "29",
             "family": "youngest son, brother of Mrs. A. E. Moller and Mrs. A. R. Wenzel."            
         },
-        {
-           "name": "M1911",
-            "fireRate": "20-30 rpm",
-            "produced": "1911",
-            "effectiveRange": "55yd",
-            "designer": "John Browning",
-            "image": "/images/M1911.png" 
+        {            
+            "publish": "1918",            
+            "description": "portrait (17 August, p. 26);reference in newspaper",
+            "source": "Chronicle, 17 August 1918, p. 26, col. b  p. 39, col. a;Chronicle, 10 August 1918, p. 39, col. c",    
+                        
+            "name": "Harold William Richards",
+            "life": "1889-1918",
+            "home": "Clare - South Australia",
+            "rank": "Private",
+            "number": "",
+            "battalion": "13th Field Ambulance",
+            "war": "World War, 1914-1918",
+            "death": "8 August 1918, France",
+            "deathcause": "killed in action",
+            "age": "21",
+            "family": "eldest son of Mr. and Mrs. W. I. Taylor"            
         },
-        {
-           "name": "Mauser C96",
-            "fireRate": "20 - 30 rpm",
-            "produced": "1896",
-            "effectiveRange": "160-220yd",
-            "designer": "Feederie Brothers",
-            "image": "/images/mauser.png"
+        {            
+            "publish": "1918",            
+            "description": "portrait (17 August, p. 26);reference in newspaper",
+            "source": "Chronicle, 14 September 1918, p. 27, col. e;Chronicle, 21 September 1918, p. 27, col. c;Chronicle, 2 November 1918, p. 26, col. d  p. 38, col. b",     
+                        
+            "name": "Sydney Herbert Oldfield",
+            "life": "1883-1918",
+            "home": "Milang - South Australia",
+            "rank": "Private",
+            "number": "",
+            "battalion": "10th Battalion",
+            "war": "World War, 1914-1918",
+            "death": "10 August 1918, France",
+            "deathcause": "killed in action",
+            "age": "34",
+            "family": "son of Mrs R. Oldfield, brother of the late Sergeant E. Oldfield"            
         },
-        {
-           "name": "Webley MK VI",
-            "fireRate": "20-30 rpm",
-            "produced": "1887",
-            "effectiveRange": "50yd",
-            "designer": "Webley & Scott",
-            "image": "/images/Webley_MKV.png"
+        {            
+            "publish": "1918",            
+            "description": "reference in newspaper;portrait (2 November, p. 26)",
+            "source": "Chronicle, 7 September 1918, p. 27, col. c;Chronicle, 14 September 1918, p. 24, col. c  p. 38, col. d",            
+                                    
+            "name": "Sydney Stockham",
+            "life": "1889-1918",
+            "home": "Fullarton - South Australia",
+            "rank": "Lieutenant",
+            "number": "",
+            "battalion": "27th Battalion",
+            "war": "World War, 1914-1918",
+            "death": "18 August 1918, France",
+            "deathcause": "died of wounds",
+            "age": "28",
+            "family": "youngest son of G. W. and S. Stockham"            
         },
-        {
-           "name": "Roth-Steyr M1907",
-            "fireRate": "900 rpm",
-            "produced": "1908",
-            "effectiveRange": "80yd",
-            "designer": "Karel Kmka",
-            "image": "/images/roth_steyr.png"
-        }
-    ],
-    
-       "rifles": [
-        {
-            "name": "Lee-Enfield",
-            "fireRate": "20-30 rpm",
-            "produced": "1903",
-            "effectiveRange": "550yd",
-            "designer": "Lee, Enfield",
-            "image": "/images/lee-en.gif" 
+        {            
+            "publish": "1918",            
+            "description": "reference in newspaper;portrait",
+            "source": "Chronicle, 31 August 1918, p. 27, col. e;Chronicle, 28 September 1918, p. 34, col. e  p. 39, col. a;Chronicle, 14 September 1918, p. 24, col. d", 
+                        
+            "name": "Claud William Mason",
+            "life": "1894-1918",
+            "home": "O'Halloran Hill - South Australia",
+            "rank": "Private",
+            "number": "D Company",
+            "battalion": "48th Battalion",
+            "war": "World War, 1914-1918",
+            "death": "8 August 1918, France",
+            "deathcause": "killed in action",
+            "age": "23",
+            "family": "youngest son of Mr. and Mrs. J. W. Mason student Surveyor"            
         },
-        {
-           "name": "Mauser Gewehr 98",
-            "fireRate": "15 rpm",
-            "produced": "1898",
-            "effectiveRange": "550yd",
-            "designer": "Paul Mauser",
-            "image": "/images/gewehr98.png" 
+        {            
+            "publish": "1918",            
+            "description": "reference in newspaper;portrait",
+            "source": "Chronicle, 31 August 1918, p. 27, col. c;Chronicle, 14 September 1918, p. 24, col. f  p. 38, col. d",            
+            
+            "name": "William Gordon Taylor",
+            "life": "1896-1918",
+            "home": "Clare - South Australia",
+            "rank": "Private",
+            "number": "",
+            "battalion": "13th Field Ambulance",
+            "war": "World War, 1914-1918",
+            "death": "8 August 1918, France",
+            "deathcause": "killed in action",
+            "age": "21",
+            "family": "eldest son of Mr. and Mrs. W. I. Taylor"            
         },
-        {
-           "name": "M1903 Springfield",
-            "fireRate": "10-15 rpm",
-            "produced": "1896",
-            "effectiveRange": "1000yd",
-            "designer": "Springfield Armory",
-            "image": "/images/M1903-Springfield.gif"
+        {            
+            "publish": "1918",            
+            "description": "reference in newspaper;portrait (14 September, p. 24)",
+            "source": "Chronicle, 14 September 1918, p. 24, col. f  p. 38, col. d",            
+                        
+            "name": "Leonard Hughes",
+            "life": "1894-1918",
+            "home": "Wayville - South Australia",
+            "rank": "Sapper",
+            "number": "service number 6406",
+            "battalion": "",
+            "war": "World War, 1914-1918",
+            "death": "23 August 1918, France",
+            "deathcause": "killed in action",
+            "age": "26",
+            "family": "son of Mr. and Mrs. F.W. Hughes"            
         },
-        {
-           "name": "Mosin-Nagano M91",
-            "fireRate": "Variable",
-            "produced": "1887",
-            "effectiveRange": "550yd",
-            "designer": "Cpt Mosin, Nagant",
-            "image": "/images/Mosin-NaganoM91.png"
+        {            
+            "publish": "1918",            
+            "description": "",
+            "source": "Chronicle, 14 September 1918, p. 38, col. c;Chronicle, 19 October 1918, p. 37, col. d",           
+            
+            "name": "Roy Long",
+            "life": "1898-1918",
+            "home": "Carey's Gully - South Australia",
+            "rank": "Private",
+            "number": "",
+            "battalion": "10th Battalion",
+            "war": "World War, 1914-1918",
+            "death": "11 August 1918, overseas",
+            "deathcause": "killed in action",
+            "age": "20",
+            "family": "second son of Mr. and Mrs. W. Long  brother of Private C. H. Long"            
         },
-        {
-           "name": "M1917 Enfield",
-            "fireRate": "20-30 rpm",
-            "produced": "1908",
-            "effectiveRange": "600yd",
-            "designer": "Lee, Enfield",
-            "image": "/images/M1917Enfield.png"
-        }
-    ],
-    
-    "machineguns": [
-        {
-            "name": "Lewis gun",
-            "fireRate": "500-600 rpm",
-            "produced": "1913",
-            "effectiveRange": "880yd",
-            "designer": "2 or 3 guys",
-            "image": "/images/LewisGun.png" 
+        {            
+            "publish": "1918",            
+            "description": "reference in newspaper;portrait (page 24)",
+            "source": "Chronicle, 14 September 1918, p.38, col. c;Chronicle, 5 October 1918, p. 26, col. b",     
+                        
+            "name": "James Maurice Theobald",
+            "life": "1895-1918",
+            "home": "Meadows - South Australia",
+            "rank": "Private",
+            "number": "service number 4863",
+            "battalion": "43rd Battalion",
+            "war": "World War, 1914-1918",
+            "death": "26 August 1918, France",
+            "deathcause": "killed in action",
+            "age": "23",
+            "family": "eldest son of Rev. Thomas and Mrs Theobald, fiance of Laura Genge"            
         },
-        {
-           "name": "Browning auto rifle",
-            "fireRate": "500rpm",
-            "produced": "1917",
-            "effectiveRange": "1500yd",
-            "designer": "John Browning",
-            "image": "/images/Browning-automatic-rifle.png" 
+        {            
+            "publish": "1918",            
+            "description": "reference in newspaper",
+            "source": "Chronicle, 14 September 1918, p. 38, col. d  p. 27, col. c;Chronicle, 19 October 1918, p. 37, col. d",            
+
+            "name": "Thomas George Ellis",
+            "life": "1884-1918",
+            "home": "Stepney - South Australia",
+            "rank": "Private",
+            "number": "Service number 4484",
+            "battalion": "10th Battalion",
+            "war": "World War, 1914-1918",
+            "death": "11 August 1918, France",
+            "deathcause": "killed in action",
+            "age": "",
+            "family": "son of Mr. and Mrs. W. Ellis, brother of Frank"            
         },
-        {
-           "name": "Madsen LMG",
-            "fireRate": "450 rpm",
-            "produced": "1989",
-            "effectiveRange": "1000yd",
-            "designer": "Rasmussen&Schoubue",
-            "image": "/images/madsen-mg.png"
-        }
-    ],
-    
-    "shotguns": [
-        {
-            "name": "Winchester 1897",
-            "action": "Pump action",
-            "produced": "1897",
-            "feedsystem": "5 round",
-            "designer": "John Browning",
-            "image": "/images/1897trenchgun.png" 
+        {            
+            "publish": "1918",            
+            "description": "reference in newspaper",
+            "source": "Chronicle, 31 August 1918, p. 27, col. e;Chronicle, 14 September 1918, p. 38, col. d;Chronicle, 30 November 1918, p. 38, col. e", 
+                        
+            "name": "Sydney Rupert Murphy",
+            "life": "1891-1918",
+            "home": "Payneham - South Australia",
+            "rank": "Sergeant",
+            "number": "service number 127",
+            "battalion": "43rd Battalion",
+            "war": "World War, 1914-1918",
+            "death": "22 August 1918, France",
+            "deathcause": "killed in action",
+            "age": "26",
+            "family": "youngest son of Mr. and Mrs. Arthur Thomas Murphy"            
         },
-        {
-           "name": "Remington model 10",
-            "action": "Pump action",
-            "produced": "1908",
-            "feedsystem": "6 round",
-            "designer": "John Pedersen",
-            "image": "/images/Model_10.png" 
-        },
-        {
-           "name": "Browning auto 5",
-            "action": "Semi-Automatic",
-            "produced": "1902",
-            "feedsystem": "2 or 4 round",
-            "designer": "John Browning",
-            "image": "/images/Browning_auto_5.png"
-        }
+        {            
+            "publish": "1918",            
+            "description": "reference in newspaper;portrait (26 October)",
+            "source": "Chronicle, 14 September 1918, p. 27, col. c;Chronicle, 19 October 1918, p. 37, col. d;Chronicle, 26 October 1918, p. 26, col. c",            
+            
+            "name": "Hugh Bawden",
+            "life": "1894-1918",
+            "home": "Sandilands - South Australia",
+            "rank": "Lance-Corporal",
+            "number": "Service number 5969",
+            "battalion": "Gunner 10th Battalion",
+            "war": "World War, 1914-1918",
+            "death": "10 August 1918, France",
+            "deathcause": "killed in action",
+            "age": "24",
+            "family": "eldest son of Mr. H. Bawden"            
+        }       
     ]
 }

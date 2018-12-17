@@ -1,35 +1,139 @@
-<body>
-<h1 id="h1tag">Life During war</h1>
-    
-    <div id="cont">f</div>
-    
+<body>   
+    <head>
+
+        <meta charset="UTF-8">
+        <title>JSON Tester</title>
+
+    </head>
+    <div id="cont"></div>
+
+
+
+
 </body>
 
 <script>
+// auto set browser to top of page
+$('html,body').scrollTop(0);
 
- const person = {
-    name: 'Test Json Name',
-    job: 'This',
-    city: 'Glasgow',
-    bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam condimentum quam quis arcu bibendum'
-}
- 
- // And then create our markup:
-const markup = `
- <div class="person">
-    <h2>
-        ${person.name}
-    </h2>
-    <p class="location">${person.city}</p>
-    <p class="bio">${person.bio}</p>
- </div>
+// load wepons json
+contentLoader.loadJson('json/lifeduringwar.json', function(err, jsonData) {
+    if (err) { throw err; }    
+
+    var jumboData = jsonData['jumboTitle']; 
+
+    var trenchTimes = jsonData['times']; 
+
+    const markup = `
+<div class="jumbotron">              
+<div class="jumbotron__textcontainer">
+<div class="jumbotron__title">
+<h1>${jsonData['jumboTitle']}</h1>
+    </div>
+
+<div class="jumbotron__text">
+<p>${jsonData['jumboBody']}</p>
+    </div>
+    </div>
+
+    </div>
+
+<div class="ldw-row">
+<div class="ldw-column-left">
+<h3>BACK HOME</h3>
+<h4>${jsonData['womanTitle']}</h4>
+<p>${jsonData['womanBody']}</p>
+
+<img class="image-wh" src="images/womanwar.jpg">               
+
+<h4>${jsonData['childrenTitle']}</h4>
+<p>${jsonData['childrenBody']}</p>
+
+<h3>${jsonData['attackTitle']}</h3>
+<p>${jsonData['attackBody']}</p>
+
+<img class="image-wh" src="images/zeppelin.jpg">
+
+    </div>
+
+
+<div class="ldw-column-right">
+<h3>AT WAR</h3>
+<h4>${jsonData['trenchesTitle']}</h4>
+<p>${jsonData['trenchesBody']}</p>
+
+<img class="image-wh" src="images/trench.jpg">
+
+<h4>${jsonData['restTitle']}</h4>
+<p>${jsonData['restBody']}</p>
+
+<h4>${jsonData['dirtTitle']}</h4>
+<p>${jsonData['dirtBody']}</p>
+
+<h4>${jsonData['timesTitle']}</h4>
+
+<div class="lah-block">
+
+${trenchTimes.map(Data =>
+`
+<div class="lah-block-row">                
+<div class="lah-block-column-left">
+<p>${Data.time}</p>
+    </div><div class="lah-block-column-right">
+<p>${Data.job}</p>
+    </div>
+    </div>
+`
+  ).join("")}
+
+    </div>
+
+<div class="seper"></div>
+
+<h3>${jsonData['letterTitle']}</h3>
+<p>${jsonData['letterBody']}</p>
+
+<img class="image-wh" src="images/letter.jpg">
+
+<h4>${jsonData['censorshipTitle']}</h4>
+<p>${jsonData['censorshipBody']}</p>
+
+<h3>${jsonData['soilderTitle']}</h3>
+<p>${jsonData['soilderBody1']}</p>
+<br>
+<p>${jsonData['soilderBody2']}</p>
+<br>
+<p>${jsonData['soilderBody3']}</p>
+<br>
+<p>${jsonData['soilderBody4']}</p>
+<br>
+<p>${jsonData['soilderBody5']}</p>
+
+<img class="image-wh" src="images/equipment.jpg">
+
+    </div>
+
+    </div>
+
+
 `;
 
-document.getElementById('cont').innerHTML = markup;
- 
+    document.getElementById('cont').innerHTML = markup;
+
+});
+
 </script>
 
 <!--So in here you would load your json data in and pass it into the template above and then call this and that would load your page-->
 
 <!--load json by calling the functions-->
-   
+
+
+
+
+
+
+
+
+
+

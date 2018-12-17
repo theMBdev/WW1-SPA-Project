@@ -1,0 +1,113 @@
+    <body>   
+    <head>
+
+        <meta charset="UTF-8">
+        <title>JSON Tester</title>
+
+    </head>
+    <div id="cont"></div>
+
+        
+        
+
+</body>
+
+<script>
+// auto set browser to top of page
+$('html,body').scrollTop(0);
+
+// load wepons json
+contentLoader.loadJson('json/warheroes.json', function(err, jsonData) {
+    if (err) { throw err; }    
+
+    var jumboData = jsonData['jumboTitle'];
+    var cardData = jsonData['warHeroes'];    
+
+    var warHeroes = jsonData['warHeroes']; 
+
+    const markup = `
+<div class="jumbotron">              
+<div class="jumbotron__textcontainer">
+<div class="jumbotron__title">
+<h1>${jsonData['jumboTitle']}</h1>
+    </div>
+
+<div class="jumbotron__text">
+<p>${jsonData['jumboBody']}</p>
+    </div>
+    </div>
+
+    </div>
+
+<div class="weaponsofwar-page-container">
+
+<section class="weaponsofwar-heading-container">
+<h2>${jsonData.title}</h2>
+<p class="weaponsofwar-heading-container__text">${jsonData.body}</p>
+    </section>
+
+
+<section class="cards">
+
+${warHeroes.map(Data =>
+`
+<article>
+<div class="warhero-card">
+           
+            
+            <div class="warhero-card-details">
+<div class="griditem1">
+                <h3>${Data.name}</h3>
+                <p>${Data.life}</p>
+                <p>${Data.home}</p>      
+</div>
+            </div>
+            
+            <div class="warhero-card-title1"><p>Details</p></div>
+
+            <div class="warhero-card-details1">
+                <p>${Data.rank}</p>
+                <p>${Data.number}</p>
+                <p>${Data.battalion}</p>
+                <p>${Data.war}</p>
+            </div>
+
+            <div class="warhero-card-title2"><p>Death</p></div>
+
+            <div class="warhero-card-details2">
+                <p>${Data.death}</p>
+                <p>${Data.deathcause}</p>
+                <p>Aged ${Data.age}</p>
+            </div>
+            <div class="warhero-card-title3"><p>Family</p></div>
+            <div class="warhero-card-details3">
+                <p>${Data.family}</p>
+            </div>
+        </div>
+    </article>`
+
+               ).join("")}
+              
+    </section>
+    
+
+    </div>                  
+
+`;
+
+    document.getElementById('cont').innerHTML = markup;
+
+});
+
+</script>
+
+<!--So in here you would load your json data in and pass it into the template above and then call this and that would load your page-->
+
+<!--load json by calling the functions-->
+
+
+
+
+
+
+

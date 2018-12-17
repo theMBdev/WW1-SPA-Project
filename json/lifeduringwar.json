@@ -1,0 +1,82 @@
+{
+    "homeTown": "Metro City", 
+    "jumboTitle": "Life During War",
+    
+    "womanTitle": "Women",     
+    "womanBody": "Women weren’t allowed to join the army, but the war still completely changed their lives – in some ways, for the better! \r Before the war, a woman’s role was in the home. But with the men away at war, help was needed in the workplace – and so millions of women went to work in offices, factories, shops, transport and on farms. Many men were horrified by the idea of females working and, even worse, wearing trousers! But the women proved that they could do the work of men, and do it just as well. Without the women of Britain growing food and making weapons, the war could not have been won.", 
+    
+    "childrenTitle": "Children",     
+    "childrenBody": "The Boy Scouts and Girl Guides had a vital role on the Home Front too. Girl Guides would make basic medical equipment for wounded soldiers, like bandages, swabs and slings. They also worked growing vegetables and delivering milk. Boy Scouts collected eggs for injured troops, protected roads and railway lines, and delivered messages.", 
+    
+    "attackTitle": "Attack from the sky",     
+    "attackBody": "The First World War was the first time in history that Britain had come under threat from the sky. Gigantic German airships, known as Zeppelins (below), carried out 52 bombing raids on Britain during the war – killing more than 500. People were terrified of them!", 
+    
+    
+    
+    "trenchesTitle": "Trenches",     
+    "trenchesBody": "On the Western Front, the war was fought in trenches. Trenches were long, narrow ditches dug into the ground where soldiers lived all day and night. There were many lines of German trenches on one side and many lines of Allied trenches on the other. In the middle, was no man's land, so-called because it did not belong to either army. Soldiers crossed No Man's Land when they wanted to attack the other side.", 
+    
+    "restTitle": "Rest",     
+    "restBody": "Soldiers in the trenches did not get much sleep. When they did, it was in the afternoon during daylight and at night only for an hour at a time. They were woken up at different times, either to complete one of their daily chores or to fight. During rest time, they wrote letters and sometimes played card games.", 
+    
+    "dirtTitle": "Dirty trenches",     
+    "dirtBody": "The trenches could be very muddy and smelly. There were many dead bodies buried nearby and the latrines (toilets) sometimes overflowed into the trenches. Millions of rats infested the trenches and some grew as big as cats. There was also a big problem with lice that tormented the soldiers on a daily basis.", 
+    
+    "timesTitle": "A typical day in the trenches", 
+    
+     "letterTitle": "Letter sent back home",     
+    "letterBody": "As well as the fighting and problems with health, one of the biggest issues that faced soldiers on the front line was homesickness.    Soldiers sometimes had to spend months away from home fighting. Often, they only got ten days of leave (holiday) in a year. However, they were allowed to write letters home to their loved ones. They were given postcards or headed paper that allowed them to write home for free.",     
+    
+     "censorshipTitle": "Censorship",     
+    "censorshipBody": "Most letters sent from the front line were read by an officer who checked it was acceptable to send. He checked for anything that might give away British army secrets. He also made sure that letters were not too sad, so they did not spoil the morale (the way people felt) back home. This was called censorship. Some could be sent without being read. Soldiers were trusted not to give information away.As well as letters and postcards, newspapers were also sometimes delivered to the trenches. This meant the soldiers could keep up to date with what was happening in the war, at home and in other parts of the world.", 
+    
+     "soilderTitle": "Soilder Equipment",     
+     "soilderBody1": "Gas mask. This protected him against gas attacks from the enemy.", 
+     "soilderBody2": " Weapons and ammunition. These included a rifle, bullets, a bayonet and some grenades.", 
+     "soilderBody3": "Protective clothes. Items which were suitable for the trenches like boots, a ground sheet cape, puttees (long strips of cloth worn from the ankle to the knee) and a helmet. However, this was not always enough for the very damp conditions the soldiers lived in.", 
+     "soilderBody4": "'Webbing equipment' (kit made from strong, cotton webbing material). This included a haversack containing personal items such as knife, fork, shaving kit, water bottle, soap and towel.", 
+     "soilderBody5": "Shovel. This helped him keep the trench the way it needed to be. He could use it to remove excessive mud", 
+        
+    "times": [
+        {
+            "time": "5am",
+             "job": "'Stand-to' (short for 'Stand-to-Arms', meaning to be on high-alert for enemy attack) half an hour before daylight"
+        },
+         {
+            "time": "5:30am",
+             "job": "Rum ration"  
+        },
+         {
+            "time": "6am",
+             "job": "Rum ration"  
+        },
+         {
+            "time": "7am",
+             "job": "Stand-to half an hour after daylight"  
+        },
+         {
+            "time": "After 8am",
+             "job": "Clean themselves, clean weapons, tidy trench"  
+        },
+         {
+            "time": "Noon",
+             "job": "Dinner After dinner - Sleep and downtime (one man per ten on duty)"  
+        },
+         {
+            "time": "5pm",
+             "job": "Tea" 
+        },
+        {
+            "time": "6pm",
+             "job": "Stand-to half an hour before dusk" 
+        },
+        {
+            "time": "6:30pm",
+             "job": "Stand-down half an hour after dusk" 
+        },
+        {
+            "time": "6:30pm +",
+             "job": "Work all night with some time for rest (patrols, digging trenches, putting up barbed wire, getting stores, replacement of unit of soldiers everyfive days)" 
+        } 
+    ]   
+}
