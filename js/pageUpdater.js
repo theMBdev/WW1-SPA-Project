@@ -7,8 +7,6 @@ var pageUpdater = (function(){
     function getPage(page) {
         var request = new XMLHttpRequest();
 
-        //        var section = document.querySelector('section'); 
-
         console.log("Page: ",page);
         
         //loadpage to viewer

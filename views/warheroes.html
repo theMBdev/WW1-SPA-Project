@@ -16,7 +16,6 @@
 // auto set browser to top of page
 $('html,body').scrollTop(0);
 
-// load wepons json
 contentLoader.loadJson('json/warheroes.json', function(err, jsonData) {
     if (err) { throw err; }    
 
@@ -26,7 +25,7 @@ contentLoader.loadJson('json/warheroes.json', function(err, jsonData) {
     var warHeroes = jsonData['warHeroes']; 
 
     const markup = `
-<div class="jumbotron">              
+<div class="jumbotron" style="background-image: url(${jsonData['jumboImage']});">              
 <div class="jumbotron__textcontainer">
 <div class="jumbotron__title">
 <h1>${jsonData['jumboTitle']}</h1>
@@ -100,12 +99,6 @@ ${warHeroes.map(Data =>
 });
 
 </script>
-
-<!--So in here you would load your json data in and pass it into the template above and then call this and that would load your page-->
-
-<!--load json by calling the functions-->
-
-
 
 
 

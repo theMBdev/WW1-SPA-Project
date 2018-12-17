@@ -41,8 +41,6 @@ var slideManager = (function(){
         dots[slideIndex - 1].className += " active";
     }   
 
-
-
     return {
         plusSlides : plusSlides,
         currentSlide : currentSlide,

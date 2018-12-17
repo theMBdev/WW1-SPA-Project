@@ -3,7 +3,6 @@
 
 <script>
 
-
 //load slide   // LOAD ORDER 2
 function loadJsonFunc() {
     console.log('Loading slide json 3');
@@ -11,14 +10,7 @@ function loadJsonFunc() {
     contentLoader.loadJson('json/slidedata.json', function(err, jsonData) {
         if (err) { throw err; }    
 
-        //        console.log('Data slide', jsonData['slideshow1'])
         var slide = jsonData['slideshow1'];    
-        //
-        //        console.log(slide[1].title);
-        //        console.log(slide[0].body);
-        //
-        //        console.log(slide[2].title);
-        //        console.log(slide[1].body);
 
         const markup = `
 
@@ -56,11 +48,8 @@ ${slide.map(slideData =>
 <div id ="incomingNumberAni">2</div>
     </div>
 
-
-
 `;
 
-        // this may not work use query selecter at bottom
         document.getElementById('slider').innerHTML = markup;
     });
 
@@ -257,10 +246,6 @@ contentLoader.loadJson('json/home.json', function(err, jsonData) {
     var jumboData = jsonData['jumboTitle'];
     var sectionData = jsonData['sections'];
     var cardData = jsonData['cardDetails'];    
-
-    //    console.log('Data home',jsonData['jumboTitle']);
-    //    console.log('Data home',sectionData[1].title);
-    //    console.log(cardData[1].title);
 
     const markup = `
 <div class="parallax">
@@ -499,9 +484,8 @@ ${cardData.map(
     </section>
 
     </div>
-
 `;
-
+    
     document.getElementById('home-cont').innerHTML = markup;   
 
     //not loading last?
@@ -510,8 +494,5 @@ ${cardData.map(
         loadJsonFunc();
     });
 });
-
-
-
 
 </script>

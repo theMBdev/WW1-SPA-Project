@@ -21,15 +21,11 @@
         var jumboData = jsonData['jumboTitle'];
         var cardData = jsonData['pistols'];    
 
-        console.log('Data Guns',jsonData['homeTown']);
-        //console.log(cardData[1].name);
-
-
         var tanks = jsonData['tanks']; 
 
 
         const markup = `
-<div class="jumbotron">              
+<div class="jumbotron" style="background-image: url(${jsonData['jumboImage']});">              
 <div class="jumbotron__textcontainer">
 <div class="jumbotron__title">
 <h1>${jsonData['jumboTitle']}</h1>
@@ -111,10 +107,6 @@ ${tanks.map(Data =>
     </section>
 
 
-
-
-
-
     </div>                  
 
 `;
@@ -124,9 +116,5 @@ ${tanks.map(Data =>
     });
 
 </script>
-
-<!--So in here you would load your json data in and pass it into the template above and then call this and that would load your page-->
-
-<!--load json by calling the functions-->
 
 

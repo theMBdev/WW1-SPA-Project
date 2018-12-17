@@ -7,7 +7,6 @@
     </head>
     <div id="cont"></div>
 
-
 </body>
 
 <script>
@@ -22,21 +21,11 @@ contentLoader.loadJson('json/airvehicles.json', function(err, jsonData) {
     var cardData = jsonData['pistols'];    
 
     console.log('Data Guns',jsonData['homeTown']);
-    //console.log(cardData[1].name);
-    
-    
+
     var planes = jsonData['planes']; 
 
-   // var machineGuns = jsonData['pistols']; 
-    //var shotguns = jsonData['pistols']; 
-    // And then create our markup: Load json here this should be your json file
-    // loop this to catch all
-    // store json in a thing like person
-    //https://wesbos.com/template-strings-html/   <<shows loops
-
-
     const markup = `
-<div class="jumbotron">              
+<div class="jumbotron" style="background-image: url(${jsonData['jumboImage']});">              
 <div class="jumbotron__textcontainer">
 <div class="jumbotron__title">
 <h1>${jsonData['jumboTitle']}</h1>
@@ -60,7 +49,7 @@ contentLoader.loadJson('json/airvehicles.json', function(err, jsonData) {
 <section class="cards">
 
 ${planes.map(Data =>
-`
+             `
 <article>
 <div class="weapon-card">
 <div class="weapon-card__top">
@@ -102,10 +91,10 @@ ${planes.map(Data =>
     </div>     
     </article>`
 
-               ).join("")}
-              
+            ).join("")}
+
     </section>
-    
+
     </div>                  
 
 `;
@@ -115,9 +104,5 @@ ${planes.map(Data =>
 });
 
 </script>
-
-<!--So in here you would load your json data in and pass it into the template above and then call this and that would load your page-->
-
-<!--load json by calling the functions-->
 
 
