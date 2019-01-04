@@ -24,7 +24,7 @@ contentLoader.loadJson('json/weaponsofwar.json', function(err, jsonData) {
     console.log(cardData[1].title);
     
 const markup = `
-<div class="jumbotron" style="background-image: url(${jsonData['jumboImage']});">              
+<div class="jumbotron wowbanner" style="background-image: url(${jsonData['jumboImage']});">              
             <div class="jumbotron__textcontainer">
                 <div class="jumbotron__title">
                     <h1>${jsonData['jumboTitle']}</h1>

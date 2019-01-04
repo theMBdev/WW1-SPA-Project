@@ -762,6 +762,10 @@ body {
 
 
 /*infantrt Wepons Page mobile*/
+.wowbanner {
+    background-position: 0% 25%;
+}
+
 .weaponsofwar-page-container {   
     margin: auto;
     padding: 5px;
@@ -1248,7 +1252,7 @@ article {
 
 
     .jumbotron {
-        height: 300px;                   
+        height: 300px;           
     }
 
     .jumbotron--homepage {
