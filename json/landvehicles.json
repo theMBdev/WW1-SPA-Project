@@ -13,7 +13,7 @@
             "range": "35m",
             "armour": "6-12mm",
             "speed": "6.4 km/h",
-            "image": "/images/MarkIV.jpg",
+            "image": "./images/MarkIV.jpg",
             "maingun": "2 x 6-pounder (57-mm) 6 cwt QF guns",
             "secondarygun": "3 x .303 in Lewis guns"
         },
@@ -23,7 +23,7 @@
             "range": "37m",
             "armour": "8-22mm",
             "speed": "7.5 km/h",
-            "image": "/images/renault-ft.jpg",
+            "image": "./images/renault-ft.jpg",
             "maingun": "Puteaux SA 1918 37 mm gun",
             "secondarygun": "None"
         },
@@ -33,7 +33,7 @@
             "range": "19-50m",
             "armour": "15-30mm",
             "speed": "4-15 km/h",
-            "image": "/images/A7V.jpg",
+            "image": "./images/A7V.jpg",
             "maingun": "57 mm gun",
             "secondarygun": "6 × 7.9mm machine guns"
         },
@@ -43,7 +43,7 @@
             "range": "37m",
             "armour": "11-19mm",
             "speed": "12 km/h",
-            "image": "/images/St._Chamond.jpg",
+            "image": "./images/St._Chamond.jpg",
             "maingun": "75 mm gun",
             "secondarygun": "4 x 8mm Hotchkiss machine guns"
         },
@@ -53,7 +53,7 @@
             "range": "80m",
             "armour": "14mm",
             "speed": "13 km/h",
-            "image": "/images/MediumMarkAWhippet.png",
+            "image": "./images/MediumMarkAWhippet.png",
             "maingun": "4 × 0.303 inch Hotchkiss machine guns",
             "secondarygun": "none"
         }

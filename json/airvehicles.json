@@ -21,7 +21,7 @@
             "range": "595 km",
             "ceiling": "5500 m",
             "speed": "198 km/h",
-            "image": "no/images/Bristolf2fighter.jpg"  
+            "image": "./images/Bristolf2fighter.jpg"  
         },
         {
            "name": "Nieuport 17",
@@ -29,7 +29,7 @@
             "range": "250 km",
             "ceiling": "5300 m",
             "speed": "177 km/h",
-            "image": "/images/Nieuport17.jpg" 
+            "image": "./images/Nieuport17.jpg" 
         },
         {
            "name": "Fokker vi",
@@ -37,7 +37,7 @@
             "range": "250 km",
             "ceiling": "6000 m",
             "speed": "197 km/h",
-            "image": "/images/Fokkervi.jpg" 
+            "image": "./images/Fokkervi.jpg" 
         }
     ]
 }
